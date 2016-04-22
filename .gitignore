@@ -31,3 +31,4 @@ system/tastyigniter/session/*
 
 system/tastyigniter/migrations/backups/*
 !system/tastyigniter/migrations/backups/index.html
+/nbproject/private/

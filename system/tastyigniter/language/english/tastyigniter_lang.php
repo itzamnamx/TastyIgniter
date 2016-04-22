@@ -14,9 +14,9 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['tastyigniter_system_name']       = 'TastyIgniter';
-$lang['tastyigniter_system_powered']    = '<a target="_blank" href="http://tastyigniter.com">Powered by TastyIgniter</a>';
-$lang['tastyigniter_copyright']         = 'Thank you for using <a target="_blank" href="http://tastyigniter.com">TastyIgniter</a>';
+$lang['tastyigniter_system_name']       = 'DS Nibble';
+$lang['tastyigniter_system_powered']    = '<a target="_blank" href="http://dsnibble.com.mx">Powered by DS Nibble</a>';
+$lang['tastyigniter_copyright']         = 'Thank you for using <a target="_blank" href="http://dsnibble.com.mx">DS Nibble</a>';
 $lang['tastyigniter_version']           = 'Version %s';
 
 /* End of file tastyigniter_lang.php */

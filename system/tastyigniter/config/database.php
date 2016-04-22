@@ -5,9 +5,9 @@ $query_builder = TRUE;
 
 $db['default']['dsn'] = '';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'your database username';
-$db['default']['password'] = 'your database password';
-$db['default']['database'] = 'your database name';
+$db['default']['username'] = 'root';
+$db['default']['password'] = 'ZlHF6A7KEGWN';
+$db['default']['database'] = 'lozcar';
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = 'ti_';
 $db['default']['pconnect'] = TRUE;

@@ -23,8 +23,8 @@ $lang['menu_detail'] 		                        = 'Edit Details';
 $lang['menu_address'] 		                        = 'Address Book';
 $lang['menu_recent_order'] 		                    = 'Recent Orders';
 $lang['menu_recent_reservation'] 		            = 'Recent Reservations';
-$lang['menu_locations'] 		                    = 'Comedores';
-$lang['menu_contact'] 		                        = 'Contactanos';
+$lang['menu_locations'] 		                    = 'Our Locations';
+$lang['menu_contact'] 		                        = 'Contact Us';
 $lang['menu_admin'] 		                        = 'Administrator';
 
 $lang['alert_success'] 		                        = '%s successfully.';
