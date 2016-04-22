@@ -91,6 +91,8 @@ class Customers extends Admin_Controller {
 				'customer_id' 		=> $result['customer_id'],
 				'first_name' 		=> $result['first_name'],
 				'last_name'			=> $result['last_name'],
+                                'last_name2'			=> $result['last_name2'],
+                                'card_id'			=> $result['card_id'],
 				'email' 			=> $result['email'],
 				'telephone' 		=> $result['telephone'],
 				'date_added' 		=> day_elapsed($result['date_added']),
@@ -173,6 +175,8 @@ class Customers extends Admin_Controller {
 
         $data['first_name'] 		= $customer_info['first_name'];
 		$data['last_name'] 			= $customer_info['last_name'];
+                $data['last_name2'] 			= $customer_info['last_name2'];
+                $data['card_id'] 			= $customer_info['card_id'];
 		$data['email'] 				= $customer_info['email'];
 		$data['telephone'] 			= $customer_info['telephone'];
 		$data['security_question'] 	= $customer_info['security_question_id'];
@@ -266,6 +270,7 @@ class Customers extends Admin_Controller {
 
 	private function validateForm($customer_email = FALSE) {
 		$this->form_validation->set_rules('first_name', 'lang:label_first_name', 'xss_clean|trim|required|min_length[2]|max_length[12]');
+                $this->form_validation->set_rules('card_id', 'lang:label_card_id', 'xss_clean|trim|required|min_length[2]|max_length[24]');
 		$this->form_validation->set_rules('last_name', 'lang:label_last_name', 'xss_clean|trim|required|min_length[2]|max_length[12]');
 
 		if ($customer_email !== $this->input->post('email')) {

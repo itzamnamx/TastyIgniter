@@ -65,6 +65,7 @@
 							<th class="action"><input type="checkbox" onclick="$('input[name*=\'delete\']').prop('checked', this.checked);"></th>
 							<th><a class="sort" href="<?php echo $sort_first; ?>"><?php echo lang('column_first_name'); ?><i class="fa fa-sort-<?php echo ($sort_by == 'first_name') ? $order_by_active : $order_by; ?>"></i></a></th>
 							<th><a class="sort" href="<?php echo $sort_last; ?>"><?php echo lang('column_last_name'); ?><i class="fa fa-sort-<?php echo ($sort_by == 'last_name') ? $order_by_active : $order_by; ?>"></i></a></th>
+                                                        <th><a class="sort" href="<?php echo $sort_last2; ?>"><?php echo lang('column_last_name2'); ?><i class="fa fa-sort-<?php echo ($sort_by == 'last_name2') ? $order_by_active : $order_by; ?>"></i></a></th>
 							<th><a class="sort" href="<?php echo $sort_email; ?>"><?php echo lang('column_email'); ?><i class="fa fa-sort-<?php echo ($sort_by == 'email') ? $order_by_active : $order_by; ?>"></i></a></th>
 							<th><?php echo lang('column_telephone'); ?></th>
 							<th><a class="sort" href="<?php echo $sort_date; ?>"><?php echo lang('column_date_added'); ?><i class="fa fa-sort-<?php echo ($sort_by == 'date_added') ? $order_by_active : $order_by; ?>"></i></a></th>

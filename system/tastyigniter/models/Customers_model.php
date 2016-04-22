@@ -294,9 +294,17 @@ class Customers_model extends TI_Model {
 		if (isset($save['last_name'])) {
 			$this->db->set('last_name', $save['last_name']);
 		}
+                
+                if (isset($save['last_name2'])) {
+			$this->db->set('last_name2', $save['last_name2']);
+		}
 
 		if (isset($save['email'])) {
 			$this->db->set('email', strtolower($save['email']));
+		}
+                
+                if (isset($save['card_id'])) {
+			$this->db->set('card_id', strtolower($save['card_id']));
 		}
 
 		if (isset($save['password'])) {

@@ -7,8 +7,8 @@ $lang['text_equals'] 		                        = ' = ';
 $lang['text_plus'] 		                            = '+ ';
 $lang['text_minutes'] 			                    = 'minutes';
 $lang['text_min'] 		                            = 'min';
-$lang['text_my_account'] 			                = 'My Account';
-$lang['text_information'] 			                = 'Information';
+$lang['text_my_account'] 			                = 'Mi Cuenta';
+$lang['text_information'] 			                = 'Información';
 $lang['text_follow_us'] 			                = 'Follow us on:';
 
 $lang['menu_home'] 		                            = 'Home';
@@ -16,7 +16,7 @@ $lang['menu_menu'] 		                            = 'Menu';
 $lang['menu_reservation'] 		                    = 'Reservation';
 $lang['menu_login'] 		                        = 'Login';
 $lang['menu_logout'] 		                        = 'Logout';
-$lang['menu_register'] 		                        = 'Register';
+$lang['menu_register'] 		                        = 'Registro';
 $lang['menu_my_account'] 		                    = 'My Account';
 $lang['menu_account'] 		                        = 'Main';
 $lang['menu_detail'] 		                        = 'Edit Details';
@@ -25,7 +25,7 @@ $lang['menu_recent_order'] 		                    = 'Recent Orders';
 $lang['menu_recent_reservation'] 		            = 'Recent Reservations';
 $lang['menu_locations'] 		                    = 'Comedores';
 $lang['menu_contact'] 		                        = 'Contactanos';
-$lang['menu_admin'] 		                        = 'Administrator';
+$lang['menu_admin'] 		                        = 'Administrador';
 
 $lang['alert_success'] 		                        = '%s successfully.';
 $lang['alert_error'] 		                        = 'An error occurred, %s.';
