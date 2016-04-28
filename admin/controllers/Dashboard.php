@@ -157,7 +157,7 @@ class Dashboard extends Admin_Controller {
 		$json = array();
 		$results = array();
 
-        $json['labels'] = array('Total Customers', 'Total Orders', 'Total Reservations', 'Total Reviews');
+        $json['labels'] = array('Clientes Totales', 'Ordenes Totales', 'Reservaciones Totales', 'Total de Opiniones');
         $json['colors'] = array('#63ADD0', '#5CB85C', '#337AB7', '#D9534F');
 
         $dateRanges = '1';
