@@ -1,11 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
 $lang['text_heading'] 			= 'Login';
-$lang['text_register_heading'] 	= 'Register';
-$lang['text_logout_heading'] 	= 'Logged Out';
-$lang['text_login'] 			= 'Log In';
-$lang['text_register'] 			= 'Please Register <small>It\'s easy and always will be.</small>';
-$lang['text_forgot'] 			= 'Forgot password?';
+$lang['text_register_heading'] 	= 'Registro';
+$lang['text_logout_heading'] 	= 'Sesion Cerrada';
+$lang['text_login'] 			= 'Entrar';
+$lang['text_register'] 			= 'Por favor registrate <small>Siempre será Sencillo.</small>';
+$lang['text_forgot'] 			= 'Recuperar password';
 $lang['text_required'] 			= '*** All Required fields.';
 $lang['text_login_register'] 	= 'Already registered? <a href="%s">Login</a>';
 
@@ -13,24 +13,25 @@ $lang['text_subject'] 			= 'Account created!';
 $lang['text_success_message'] 	= 'Your account has been created.';
 $lang['text_signature'] 		= 'Regards, <br />%s';
 
-$lang['label_first_name'] 		= 'First Name';
-$lang['label_last_name'] 		= 'Last Name';
+$lang['label_first_name'] 		= 'Nombre(s)';
+$lang['label_last_name'] 		= 'Apellido Paterno';
+$lang['label_last_name2'] 		= 'Apellido Materno';
 $lang['label_email'] 			= 'Email Address';
 $lang['label_password'] 		= 'Password';
-$lang['label_password_confirm'] = 'Password Confirm';
-$lang['label_telephone'] 		= 'Telephone';
-$lang['label_s_question'] 		= 'Security Question';
-$lang['label_s_answer'] 		= 'Security Answer';
-$lang['label_newsletter'] 		= 'Keep me up-to-date with offers by email.';
+$lang['label_password_confirm'] = 'Confirma el Password';
+$lang['label_telephone'] 		= 'Telefono';
+$lang['label_s_question'] 		= 'Pregunta de Seguridad';
+$lang['label_s_answer'] 		= 'Respuesta de Seguridad';
+$lang['label_newsletter'] 		= 'Mantenerme al tanto de las novedades en el Comedor.';
 $lang['label_terms'] 			= 'By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="%s" data-toggle="modal" data-target="#terms-modal">Terms and Conditions</a> set out by this site, including our Cookie Use.';
-$lang['label_captcha'] 			= 'Type the code shown';
-$lang['label_i_agree'] 	        = 'I Agree';
-$lang['label_subscribe'] 	    = 'Subscribe';
+$lang['label_captcha'] 			= 'Escribe el Codigo de Seguridad';
+$lang['label_i_agree'] 	        = 'Estoy de Acuerdo';
+$lang['label_subscribe'] 	    = 'Subscribir';
 
-$lang['button_terms_agree']     = 'I Agree';
-$lang['button_subscribe'] 		= 'Subscribe';
-$lang['button_login'] 			= 'Login';
-$lang['button_register'] 		= 'Register';
+$lang['button_terms_agree']     = 'Estoy de Acuerdo';
+$lang['button_subscribe'] 		= 'Subscribir';
+$lang['button_login'] 			= 'Acceder';
+$lang['button_register'] 		= 'Registro';
 
 $lang['error_email_exist'] 		= 'The Email address already has an account, please log in';
 $lang['error_captcha'] 		    = 'The letters you entered does not match the image.';
