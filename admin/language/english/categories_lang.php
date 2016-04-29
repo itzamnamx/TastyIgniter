@@ -25,7 +25,7 @@ $lang['label_priority'] 		        = 'Prioridad';
 $lang['label_status'] 		            = 'Estado';
 
 $lang['help_photo'] 		            = 'Selecciona un archivo para actualizar la imagen de la categoria, de otra manera dejalo en blanco.';
-$lang['help_permalink'] 		        = 'Usa solo caracteres alfanumeros.';
+$lang['help_permalink'] 		        = 'Usa solo caracteres alfanumericos, minusculas, guiones y asegurate de que sea unico.';
 
 
 /* End of file categories_lang.php */
