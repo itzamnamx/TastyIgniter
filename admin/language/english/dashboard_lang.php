@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang['text_title'] 		                = 'Tablero';
-$lang['text_heading'] 		                = 'Tanñerp';
+$lang['text_heading'] 		                = 'Tablero';
 $lang['text_zero'] 		                    = '0';
 $lang['text_dash_dash'] 		            = '--';
 $lang['text_today'] 		                = 'Hoy';
