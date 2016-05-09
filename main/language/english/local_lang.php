@@ -22,29 +22,29 @@ $lang['text_min_total'] 		            = 'Orden Minima';
 $lang['text_from'] 				            = ' de ';
 $lang['text_on'] 				            = ' sobre ';
 $lang['text_source'] 				        = 'Titulo Origen';
-$lang['text_is_opened'] 			        = '<b class="text-open text-success">We are OPEN</b>';
-$lang['text_is_closed'] 			        = '<b class="text-close text-danger">We are closed, check later</b>';
-$lang['text_is_temp_closed'] 			    = '<b class="text-close text-danger">We are temporarily closed, check later.</b>';
-$lang['text_only_delivery_is_available'] 	= 'Offers delivery only, pick-up is not available.';
-$lang['text_only_collection_is_available'] 	= 'Offers pick-up only, delivery is not available.';
-$lang['text_delivery'] 			            = 'Delivery';
-$lang['text_collection'] 		            = 'Pick-up';
-$lang['text_delivery_only'] 	            = 'Delivery only';
-$lang['text_collection_only'] 	            = 'Pick-up only';
-$lang['text_offers_both_types'] 		    = 'Offers both delivery and pick-up.';
-$lang['text_offers_no_types'] 			    = 'Does not offer delivery or pick-up.';
-$lang['text_no_delivery_areas'] 			= 'There are no delivery area covered.';
+$lang['text_is_opened'] 			        = '<b class="text-open text-success">Estamos ABIERTOS</b>';
+$lang['text_is_closed'] 			        = '<b class="text-close text-danger">Estamos cerrados, regresa más tarde.</b>';
+$lang['text_is_temp_closed'] 			    = '<b class="text-close text-danger">Estamos temporalmente cerrados, regresa más tarde.</b>';
+$lang['text_only_delivery_is_available'] 	= 'Ofrece solo Envios, no hay opción para recoger en el comedor.';
+$lang['text_only_collection_is_available'] 	= 'Ofrece solo para recoger, no hay opción para envios.';
+$lang['text_delivery'] 			            = 'Envio';
+$lang['text_collection'] 		            = 'Para llevar';
+$lang['text_delivery_only'] 	            = 'Envio unicamente';
+$lang['text_collection_only'] 	            = 'Para llevar unicamente';
+$lang['text_offers_both_types'] 		    = 'Ofrece Envio y Para llevar.';
+$lang['text_offers_no_types'] 			    = 'No ofrece Envio ni Para llevar.';
+$lang['text_no_delivery_areas'] 			= 'no hay area de envio cubierta.';
 $lang['text_asap'] 				            = 'ASAP';
-$lang['text_free_delivery'] 	            = 'Free Delivery';
-$lang['text_none'] 				            = 'None';
+$lang['text_free_delivery'] 	            = 'Envio Gratis';
+$lang['text_none'] 				            = 'Ninguno';
 $lang['text_total_review'] 		            = '(%s)';
-$lang['text_no_review'] 			        = 'There are no reviews yet.';
+$lang['text_no_review'] 			        = 'Aun no hay opiniones.';
 
-$lang['column_area_charge'] 	            = 'Delivery Charge';
-$lang['column_area_min_total'] 			    = 'Min Total';
-$lang['column_area_name'] 			        = 'Name';
+$lang['column_area_charge'] 	            = 'Cargo por Envio';
+$lang['column_area_min_total'] 			    = 'Total Minimo';
+$lang['column_area_name'] 			        = 'Nombre';
 
-$lang['button_view_menu'] 		            = 'Go To Menus';
+$lang['button_view_menu'] 		            = 'Ir a al Menu';
 
 /* End of file local_lang.php */
 /* Location: ./main/language/english/main/local_lang.php */
