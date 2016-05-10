@@ -18,7 +18,7 @@ $lang['column_menu'] 			= 'Menu';
 $lang['column_price'] 			= 'Price';
 $lang['column_action'] 			= 'Action(s)';
 
-$lang['button_add'] 			= 'Add to Cart';
+$lang['button_add'] 			= 'Agregar a la Orden';
 $lang['button_review'] 			= 'Leave a review';
 
 /* End of file menus_lang.php */

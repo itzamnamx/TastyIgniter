@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
 $lang['text_heading'] 			        = 'Address Book';
-$lang['text_my_account'] 		        = 'My Account';
+$lang['text_my_account'] 		        = 'Mi Cuenta';
 $lang['text_edit_heading'] 		        = 'Address Book Edit';
 $lang['text_no_address'] 		        = 'You don\'t have any stored address(s)';
 $lang['text_edit'] 				        = 'EDIT';

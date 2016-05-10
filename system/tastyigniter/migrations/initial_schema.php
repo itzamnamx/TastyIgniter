@@ -650,12 +650,12 @@ $insert_permissions_data = "
 $insert_security_questions_data = "
   REPLACE INTO `".$this->db->dbprefix."security_questions` (`question_id`, `text`, `priority`)
   VALUES
-    (11, 'Whats your pets name?', 1),
-    (12, 'What high school did you attend?', 2),
-    (13, 'What is your father\'s middle name?', 7),
-    (14, 'What is your mother\'s name?', 3),
-    (15, 'What is your place of birth?', 4),
-    (16, 'Whats your favourite teacher\'s name?', 5);
+    (11, '¿Cual es el nombre de tu mascota?', 1),
+    (12, '¿A que escuela asististe?', 2),
+    (13, '¿Cual es el apellido de tu madre?', 7),
+    (14, '¿Como se llama tu madre?', 3),
+    (15, '¿Donde naciste?', 4),
+    (16, '¿Cual es nombre de tu profesor?', 5);
 ";
 
 $insert_settings_data = "

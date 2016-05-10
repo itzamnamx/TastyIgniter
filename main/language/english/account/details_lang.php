@@ -3,7 +3,7 @@
 $lang['text_heading'] 			        = 'My Details';
 $lang['text_my_account'] 		        = 'My Account';
 $lang['text_details'] 			        = 'Edit your details';
-$lang['text_password_heading'] 			= 'Change Password';
+$lang['text_password_heading'] 			= 'Cambiar Password';
 $lang['text_select'] 			        = ' please select ';
 
 $lang['button_subscribe'] 			    = 'Subscribe';

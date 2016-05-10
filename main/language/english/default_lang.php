@@ -33,7 +33,7 @@ $lang['alert_error_nothing'] 		                = 'An error occurred, nothing %s.
 $lang['alert_error_try_again'] 		                = 'An error occurred, please try again.';
 $lang['alert_warning_confirm'] 		                = 'This cannot be undone! Are you sure you want to do this?';
 
-$lang['alert_no_search_query'] 		                = '<p class="alert-danger">Please type in a postcode/address to check if we can deliver to you.</p>';
+$lang['alert_no_search_query'] 		                = '<p class="alert-danger">Por favor <a href="../login">ingresa al sistema</a>, para poder tomar tu Orden.</p>';
 $lang['alert_info_outdated_browser'] 		        = 'You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.';
 
 /* End of file english_lang.php */

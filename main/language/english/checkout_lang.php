@@ -60,7 +60,7 @@ $lang['error_delivery_less_current_time'] = 'The Delivery or Pick-up Time can no
 $lang['error_no_delivery_time']         = 'The selected delivery time is outside our opening/closing hours';
 $lang['error_invalid_payment']          = 'The selected payment is invalid, please contact us';
 
-$lang['alert_no_menu_to_order']         = '<p class="alert-danger">Please, add some menus before you checkout!</p>';
+$lang['alert_no_menu_to_order']         = '<p class="alert-danger">Por favor agrega platillos en tu Orden, antes de Pagar.</p>';
 $lang['alert_no_selected_local']        = '<p class="alert-danger">Please select your local restaurant</p>';
 $lang['alert_location_closed']          = '<p class="alert-danger">Sorry, you can\'t place an order now, we are currently closed,<br /> please come back later during our opening times.</p>';
 $lang['alert_order_unavailable']        = '<p class="alert-danger">Niether delivery or pick-up is available at the selected restaurant.</p>';

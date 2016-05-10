@@ -3,9 +3,9 @@
 $lang['_text_title'] 		    = 'Cuenta';
 $lang['text_tab_general'] 		= 'General';
 
-$lang['text_heading'] 			= 'Account';
+$lang['text_heading'] 			= 'Cuenta';
 $lang['text_account'] 			= 'Mi Cuenta';
-$lang['text_edit_details'] 		= 'Editar Mis Perfil';
+$lang['text_edit_details'] 		= 'Editar Mi Perfil';
 $lang['text_address'] 			= 'Libretra de Direcciones';
 $lang['text_orders'] 			= 'Ordenes Recientes';
 $lang['text_reservations'] 		= 'Reservaciones Recientes';
