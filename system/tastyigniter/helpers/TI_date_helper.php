@@ -67,7 +67,7 @@ if ( ! function_exists('time_elapsed')) {
             $string = array_slice($string, 0, 1);
         }
 
-        return $string ? implode(', ', $string) . ' hace' : 'justo ahora';
+        return $string ? ' hace ' . implode(', ', $string)  : 'justo ahora';
     }
 }
 
