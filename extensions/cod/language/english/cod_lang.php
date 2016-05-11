@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['_text_title'] 			= 'Cash On Delivery';
+$lang['_text_title'] 			= 'Pagar a contraentrega';
 $lang['text_tab_general'] 	    = 'General';
 
 $lang['label_title'] 			= 'Title';
