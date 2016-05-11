@@ -1,29 +1,29 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['text_heading'] 			        = 'My Details';
-$lang['text_my_account'] 		        = 'My Account';
-$lang['text_details'] 			        = 'Edit your details';
+$lang['text_heading'] 			        = 'Mis Detalles';
+$lang['text_my_account'] 		        = 'Mi Cuenta';
+$lang['text_details'] 			        = 'Edita tus Detalles';
 $lang['text_password_heading'] 			= 'Cambiar Password';
-$lang['text_select'] 			        = ' please select ';
+$lang['text_select'] 			        = ' por favor selecciona ';
 
-$lang['button_subscribe'] 			    = 'Subscribe';
-$lang['button_back'] 			        = 'Back';
-$lang['button_save'] 			        = 'Save Details';
+$lang['button_subscribe'] 			    = 'Suscribir';
+$lang['button_back'] 			        = 'Regresar';
+$lang['button_save'] 			        = 'Guardar Detalles';
 
-$lang['label_first_name'] 		        = 'First Name';
-$lang['label_last_name'] 		        = 'Last Name';
-$lang['label_email'] 			        = 'Email Address';
-$lang['label_password'] 		        = 'New Password';
-$lang['label_password_confirm']         = 'New Password Confirm';
-$lang['label_old_password'] 	        = 'Old Password';
-$lang['label_telephone'] 		        = 'Telephone';
-$lang['label_s_question'] 		        = 'Security Question';
-$lang['label_s_answer'] 		        = 'Security Answer';
-$lang['label_newsletter'] 		        = 'Keep me up-to-date with offers by email.';
+$lang['label_first_name'] 		        = 'Nombre(s)';
+$lang['label_last_name'] 		        = 'Apellido Paterno';
+$lang['label_email'] 			        = 'Direccion de Email';
+$lang['label_password'] 		        = 'Nuevo Password';
+$lang['label_password_confirm']         = 'Confirmar nuevo Password';
+$lang['label_old_password'] 	        = 'Password Anterior';
+$lang['label_telephone'] 		        = 'Telefono';
+$lang['label_s_question'] 		        = 'Pregunta de Seguridad';
+$lang['label_s_answer'] 		        = 'Respuesta de Seguridad';
+$lang['label_newsletter'] 		        = 'Mantenerme al tanto de las ofertas mediante mi direccion de email.';
 
-$lang['error_password'] 		        = 'The %s you entered does not match.';
+$lang['error_password'] 		        = 'El %s que has ingresado no coincide.';
 
-$lang['alert_updated_success'] 		    = '<p class="alert-success">Details updated successfully.</p>';
+$lang['alert_updated_success'] 		    = '<p class="alert-success">Los Detalles se han actualizado exitosamente.</p>';
 
 /* End of file details_lang.php */
 /* Location: ./main/language/english/main/details_lang.php */

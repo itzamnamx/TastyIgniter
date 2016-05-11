@@ -17,7 +17,7 @@ $lang['text_edit']                      = 'Editar';
 $lang['text_ip_warning']                = '(Notificación: Tu dirección IP ha sido registrada como media de seguridad.)';
 
 $lang['text_greetings']                 = 'Hola %s,';
-$lang['text_success_heading']           = 'Order Confirmation';
+$lang['text_success_heading']           = 'Confirmación de la Orden';
 $lang['text_order_details']             = 'Detalles de la Orden';
 $lang['text_order_items']               = 'Esto es lo que has ordenado:';
 $lang['text_delivery_address']          = 'Tu Dirección de Entrega';
