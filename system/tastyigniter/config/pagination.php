@@ -40,4 +40,4 @@ $config['num_tag_open']         = '<li>';
 $config['num_tag_close']        = '</li>';
 $config['page_query_string']    = TRUE;
 $config['query_string_segment'] = 'page';
-$config['text']                 = 'Displaying {start} to {end} of {total}';
+$config['text']                 = 'Mostrando del {start} a {end} de {total}';

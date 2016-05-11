@@ -1,32 +1,32 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['text_heading'] 			= 'Recent Reviews';
-$lang['text_my_account'] 		= 'My Account';
-$lang['text_empty'] 			= 'There are no added review(s).';
+$lang['text_heading'] 			= 'Calificaciones Recientes';
+$lang['text_my_account'] 		= 'Mi Cuenta';
+$lang['text_empty'] 			= 'No hay Calificacion(es).';
 $lang['text_view'] 				= 'View';
-$lang['text_write_review'] 		= 'Write Review';
-$lang['text_view_review'] 		= 'View Review';
+$lang['text_write_review'] 		= 'Calificar el Servicio';
+$lang['text_view_review'] 		= 'Ver Calificaciones';
 
-$lang['column_sale_type'] 		= 'Sale Type';
-$lang['column_sale_id'] 		= 'Sale ID';
-$lang['column_restaurant'] 		= 'Restaurant';
-$lang['column_rating'] 			= 'Rating';
-$lang['column_author'] 			= 'Author';
-$lang['column_date'] 			= 'Date';
-$lang['column_action'] 			= 'Action(s)';
+$lang['column_sale_type'] 		= 'Tipo de Venta';
+$lang['column_sale_id'] 		= 'ID de Venta';
+$lang['column_restaurant'] 		= 'Comedor';
+$lang['column_rating'] 			= 'Calificación';
+$lang['column_author'] 			= 'Autor';
+$lang['column_date'] 			= 'Fecha';
+$lang['column_action'] 			= 'Acción(es)';
 
-$lang['button_back'] 			= 'Back';
-$lang['button_review'] 			= 'Send Review';
+$lang['button_back'] 			= 'Regresar';
+$lang['button_review'] 			= 'Enviar Calificación';
 
-$lang['label_restaurant'] 		= 'Restaurant';
-$lang['label_customer_name'] 	= 'Customer Name';
-$lang['label_quality'] 			= 'Quality';
-$lang['label_delivery'] 		= 'Delivery';
-$lang['label_service'] 			= 'Service';
-$lang['label_review'] 			= 'Review';
-$lang['label_date'] 			= 'Review Date';
+$lang['label_restaurant'] 		= 'Comedor';
+$lang['label_customer_name'] 	= 'Nombre del Cliente';
+$lang['label_quality'] 			= 'Calidad';
+$lang['label_delivery'] 		= 'Envio';
+$lang['label_service'] 			= 'Servicio';
+$lang['label_review'] 			= 'Comentario de la Calificación';
+$lang['label_date'] 			= 'Fecha de Calificación';
 
-$lang['alert_review_success'] 	= 'Review sent successfully, it will be visible once approved.';
+$lang['alert_review_success'] 	= 'Calificación enviada, gracias por tu participación.';
 $lang['alert_review_error'] 	= 'An error has occurred, please try again.';
 $lang['alert_review_duplicate'] = 'Sorry. Either you\'ve already left a review for this order, or an error has occurred.';
 $lang['alert_review_disabled']  = 'Reviews has been disabled, please contact site administrator.';

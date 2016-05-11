@@ -1,31 +1,31 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['text_heading'] 			        = 'Recent Orders';
-$lang['text_my_account'] 		        = 'My Account';
-$lang['text_view_heading'] 		        = 'My Order View';
-$lang['text_order_menus'] 			    = 'Order Menus';
-$lang['text_empty'] 			        = 'There are no order(s).';
-$lang['text_delivery'] 			        = 'Delivery';
-$lang['text_collection'] 		        = 'Pick-up';
-$lang['text_reorder'] 			        = 'Re-order';
-$lang['text_leave_review'] 		        = 'Leave review';
+$lang['text_heading'] 			        = 'Ordenes Recientes';
+$lang['text_my_account'] 		        = 'Mi Cuenta';
+$lang['text_view_heading'] 		        = 'Ver Mis Ordenes';
+$lang['text_order_menus'] 			    = 'Menus Ordenado';
+$lang['text_empty'] 			        = 'No hay Orden(es).';
+$lang['text_delivery'] 			        = 'Envio';
+$lang['text_collection'] 		        = 'Para llevar';
+$lang['text_reorder'] 			        = 'Ordenar nuevamente';
+$lang['text_leave_review'] 		        = 'Calificar';
 
-$lang['column_id'] 				        = 'ID';
-$lang['column_status'] 			        = 'Status';
-$lang['column_delivery'] 		        = 'Delivery';
-$lang['column_payment'] 		        = 'Payment';
-$lang['column_location'] 		        = 'Location';
-$lang['column_date'] 			        = 'Ready Time - Date';
-$lang['column_order'] 			        = 'Order Type';
-$lang['column_items'] 			        = 'Total Items';
-$lang['column_total'] 			        = 'Order Total';
-$lang['column_menu_name'] 		        = 'Name/Options';
-$lang['column_menu_price'] 		        = 'Price';
+$lang['column_id'] 				= 'ID';
+$lang['column_status'] 			        = 'Estado';
+$lang['column_delivery'] 		        = 'Envio';
+$lang['column_payment'] 		        = 'Pago';
+$lang['column_location'] 		        = 'Ubicación';
+$lang['column_date'] 			        = 'Dia y Hora de Entrega';
+$lang['column_order'] 			        = 'Tipo de Orden';
+$lang['column_items'] 			        = 'Total de Platillos';
+$lang['column_total'] 			        = 'Total de la Orden';
+$lang['column_menu_name'] 		        = 'Nombre/Opciones';
+$lang['column_menu_price'] 		        = 'Precio';
 $lang['column_menu_subtotal'] 		    = 'Total';
 
-$lang['button_order'] 			        = 'Place New Order';
-$lang['button_reorder'] 		        = 'Re-Order';
-$lang['button_back'] 			        = 'Back';
+$lang['button_order'] 			        = 'Realizar una nueva Orden';
+$lang['button_reorder'] 		        = 'Ordenar nuevamente';
+$lang['button_back'] 			        = 'Regresar';
 
 $lang['alert_reorder_success'] 			= '<p class="alert-success">You have successfully added the menus from order ID %s to your order.</p>';
 
