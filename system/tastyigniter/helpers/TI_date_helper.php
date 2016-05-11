@@ -43,13 +43,13 @@ if ( ! function_exists('time_elapsed')) {
         $diff->d -= $diff->w * 7;
 
         $string = array(
-            'y' => 'year',
-            'm' => 'month',
-            'w' => 'week',
-            'd' => 'day',
-            'h' => 'hour',
-            'i' => 'minute',
-            's' => 'second',
+            'y' => 'año',
+            'm' => 'mes',
+            'w' => 'semana',
+            'd' => 'dia',
+            'h' => 'hora',
+            'i' => 'minuto',
+            's' => 'segundo',
         );
 
         foreach ($string as $key => &$value) {
@@ -67,7 +67,7 @@ if ( ! function_exists('time_elapsed')) {
             $string = array_slice($string, 0, 1);
         }
 
-        return $string ? implode(', ', $string) . ' ago' : 'just now';
+        return $string ? implode(', ', $string) . ' hace' : 'justo ahora';
     }
 }
 
@@ -88,7 +88,7 @@ if ( ! function_exists('day_elapsed')) {
         $datetime = strtotime($datetime);
 
         if (mdate('%d %M', $datetime) === mdate('%d %M', time())) {
-            return 'Today';
+            return 'Hoy';
         } else if (mdate('%d %M', $datetime) === mdate('%d %M', strtotime('yesterday'))) {
             return 'Yesterday';
         }
