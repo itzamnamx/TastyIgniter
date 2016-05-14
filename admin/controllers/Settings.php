@@ -255,17 +255,18 @@ class Settings extends Admin_Controller {
 			$json['error'] = $this->lang->line('alert_error_try_again');
 		}
 
-		if (empty($json)) {
-			$this->load->library('email');                                                        //loading upload library
+		if (empty($json)) {                    
+                                     
+			$this->load->library('email');                                                        //loading email library
 			$this->email->initialize();
-
+                        $this->email->set_newline("\r\n");                            
 			$this->email->from(strtolower($this->config->item('site_email')), $this->config->item('site_name'));
 			$this->email->to(strtolower($this->config->item('site_email')));
-			$this->email->subject('This a test email');
-			$this->email->message('This is a test email. If you\'ve received this, it means emails are working in TastyIgniter.');
-
+			$this->email->subject('Este es un email de prueba');
+			$this->email->message('Este es un email de prueba. Si lo recibes el sistema de notificacion via email de Naranja dulce & Limon Partido esta funcionando.');                        
+                            
 			if ($this->email->send()) {
-				$json['success'] = sprintf($this->lang->line('alert_email_sent'), $this->config->item('site_email'));
+				$json['success'] = sprintf($this->lang->line('alert_email_sent'), $this->config->item('site_email'));                                
 			} else {
 				$json['error'] = $this->email->print_debugger(array('headers'));
             }
