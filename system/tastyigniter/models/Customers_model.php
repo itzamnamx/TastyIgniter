@@ -209,56 +209,54 @@ class Customers_model extends TI_Model {
 	}
 
 	public function resetPassword($customer_id, $reset = array()) {
-		if (is_numeric($customer_id) AND ! empty($reset)) {
+            if (is_numeric($customer_id) AND ! empty($reset)) {
 
-			$this->db->from('customers');
-			$this->db->where('customer_id', $customer_id);
-			$this->db->where('email', strtolower($reset['email']));
+            	$this->db->from('customers');
+		$this->db->where('customer_id', $customer_id);
+		$this->db->where('email', strtolower($reset['email']));
 
-			if ( ! empty($reset['security_question_id']) AND ! empty($reset['security_answer'])) {
-				$this->db->where('security_question_id', $reset['security_question_id']);
-				$this->db->where('security_answer', $reset['security_answer']);
-			}
-
-			$this->db->where('status', '1');
-			$query = $this->db->get();
-			if ($query->num_rows() === 1) {
-				$row = $query->row_array();
-
-				//Random Password
-				$alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
-				$pass = array();
-				for ($i = 0; $i < 8; $i ++) {
-					$n = rand(0, strlen($alphabet) - 1);
-					$pass[$i] = $alphabet[$n];
-				}
-
-				$password = implode('', $pass);
-
-				$this->db->set('salt', $salt = substr(md5(uniqid(rand(), TRUE)), 0, 9));
-				$this->db->set('password', sha1($salt . sha1($salt . sha1($password))));
-				$this->db->where('customer_id', $row['customer_id']);
-				$this->db->where('email', $row['email']);
-
-				if ($this->db->update('customers') AND $this->db->affected_rows() > 0) {
-
-					$mail_data['first_name'] = $row['first_name'];
-					$mail_data['last_name'] = $row['last_name'];
-					$mail_data['created_password'] = $password;
-					$mail_data['account_login_link'] = root_url('account/login');
-
-					$this->load->model('Mail_templates_model');
-					$mail_template = $this->Mail_templates_model->getTemplateData($this->config->item('mail_template_id'),
-					                                                              'password_reset');
-
-					$this->sendMail($row['email'], $mail_template, $mail_data);
-
-					return TRUE;
-				}
-			}
+		if ( ! empty($reset['security_question_id']) AND ! empty($reset['security_answer'])) {
+                    $this->db->where('security_question_id', $reset['security_question_id']);
+                    $this->db->where('security_answer', $reset['security_answer']);
 		}
 
-		return FALSE;
+		$this->db->where('status', '1');
+		$query = $this->db->get();
+		if ($query->num_rows() === 1) {
+                    $row = $query->row_array();
+
+                    //Random Password
+                    $alphabet = "abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ0123456789";
+                    $pass = array();
+                    for ($i = 0; $i < 8; $i ++) {
+			$n = rand(0, strlen($alphabet) - 1);
+			$pass[$i] = $alphabet[$n];
+                    }
+
+                    $password = implode('', $pass);
+
+                    $this->db->set('salt', $salt = substr(md5(uniqid(rand(), TRUE)), 0, 9));
+                    $this->db->set('password', sha1($salt . sha1($salt . sha1($password))));
+                    $this->db->where('customer_id', $row['customer_id']);
+                    $this->db->where('email', $row['email']);
+
+                    if ($this->db->update('customers') AND $this->db->affected_rows() > 0) {
+
+                        $mail_data['first_name'] = $row['first_name'];
+			$mail_data['last_name'] = $row['last_name'];                        
+			$mail_data['reset_password'] = $password;
+			$mail_data['account_login_link'] = root_url('account/login');
+
+			$this->load->model('Mail_templates_model');
+			$mail_template = $this->Mail_templates_model->getTemplateData($this->config->item('mail_template_id'),'password_reset');
+
+			$this->sendMail($row['email'], $mail_template, $mail_data);
+			return TRUE;
+                    }
+		}
+            }
+
+            return FALSE;
 	}
 
 	public function getAutoComplete($filter_data = array()) {

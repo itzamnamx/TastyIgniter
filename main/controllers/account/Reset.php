@@ -3,14 +3,14 @@
 class Reset extends Main_Controller {
 
 	public function __construct() {
-		parent::__construct(); 																	// calls the constructor
+		parent::__construct(); 						// calls the constructor
 
-        if ($this->customer->islogged()) { 														// checks if customer is logged in then redirect to account page.
+        if ($this->customer->islogged()) { 					// checks if customer is logged in then redirect to account page.
             redirect('account/account');
         }
 
-        $this->load->model('Customers_model');													// load the customers model
-        $this->load->model('Security_questions_model');											// load the security questions model
+        $this->load->model('Customers_model');					// load the customers model
+        $this->load->model('Security_questions_model');				// load the security questions model
 
 		$this->lang->load('account/reset');
 	}
@@ -21,9 +21,9 @@ class Reset extends Main_Controller {
 		$data['login_url'] 				= site_url('account/login');
 
 		$data['questions'] = array();
-		$results = $this->Security_questions_model->getQuestions();						// retrieve array of security questions from getQuestions method in Security questions model
-		foreach ($results as $result) {															// loop through security questions array
-			$data['questions'][] = array(														// create an array of security questions to pass to view
+		$results = $this->Security_questions_model->getQuestions();	// retrieve array of security questions from getQuestions method in Security questions model
+		foreach ($results as $result) {					// loop through security questions array
+			$data['questions'][] = array(				// create an array of security questions to pass to view
 				'id'	=> $result['question_id'],
 				'text'	=> $result['text']
 			);
@@ -36,20 +36,18 @@ class Reset extends Main_Controller {
 		$this->template->render('account/reset', $data);
 	}
 
-	private function _resetPassword() {															// method to validate password reset
+	private function _resetPassword() {					// method to validate password reset
 		if ($this->validateForm() === TRUE) {
-            $reset['email'] 				= $this->input->post('email');
-            $reset['security_question_id']	= $this->input->post('security_question');
-            $reset['security_answer'] 		= $this->input->post('security_answer');
-
-            if ($this->Customers_model->resetPassword($this->input->post('customer_id'), $reset)) { // invoke reset password method in Customers model using customer id, email and security answer
-                // checks if password reset was sucessful then display success message and delete customer_id_to_reset from session userdata
-                $this->alert->set('alert', $this->lang->line('alert_reset_success'));
-                return TRUE;
-            }
-
-            $this->alert->set('alert', $this->lang->line('alert_reset_error'));
-            redirect('account/reset');												// redirect to password reset page
+                    $reset['email']                     = $this->input->post('email');
+                    $reset['security_question_id']	= $this->input->post('security_question');
+                    $reset['security_answer'] 		= $this->input->post('security_answer');
+                    if ($this->Customers_model->resetPassword($this->input->post('customer_id'), $reset)) { // invoke reset password method in Customers model using customer id, email and security answer
+                        // checks if password reset was sucessful then display success message and delete customer_id_to_reset from session userdata
+                        $this->alert->set('alert', $this->lang->line('alert_reset_success'));
+                        return TRUE;
+                    }
+                    $this->alert->set('alert', $this->lang->line('alert_reset_error'));
+                    redirect('account/reset');					// redirect to password reset page
 		}
 	}
 
@@ -58,7 +56,7 @@ class Reset extends Main_Controller {
 		$this->form_validation->set_rules('security_question', 'lang:label_s_question', 'xss_clean|trim|required|integer');
 		$this->form_validation->set_rules('security_answer', 'lang:label_s_answer', 'xss_clean|trim|required|min_length[2]');
 
-		if ($this->form_validation->run() === TRUE) {										// checks if form validation routines ran successfully
+		if ($this->form_validation->run() === TRUE) {			// checks if form validation routines ran successfully
             return TRUE;
         } else {
 			return FALSE;
