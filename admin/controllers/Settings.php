@@ -263,7 +263,7 @@ class Settings extends Admin_Controller {
 			$this->email->from(strtolower($this->config->item('site_email')), $this->config->item('site_name'));
 			$this->email->to(strtolower($this->config->item('site_email')));
 			$this->email->subject('Este es un email de prueba');
-			$this->email->message('Este es un email de prueba. Si lo recibes el sistema de notificacion via email de Naranja dulce & Limon Partido esta funcionando.');                        
+			$this->email->message('Este es un email de prueba. Si lo recibes el sistema de notificacion via email de Naranja Dulce & Limón Partido esta funcionando.');                        
                             
 			if ($this->email->send()) {
 				$json['success'] = sprintf($this->lang->line('alert_email_sent'), $this->config->item('site_email'));                                
