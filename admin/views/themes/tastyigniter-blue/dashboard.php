@@ -141,27 +141,7 @@
         <div>
 			<div class="row">
 				<div class="col-sm-12 col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-heading"><h3 class="panel-title"><?php echo lang('text_complete_setup'); ?></h3></div>
-						<div class="panel-body">
-                            <h5><?php echo lang('text_progress_summary'); ?></h5>
-						</div>
-                        <div class="list-group check-list-group">
-                            <a href="<?php echo site_url('settings#location'); ?>" class="list-group-item">
-                                <span class=""><?php echo lang('text_settings_progress'); ?></span>
-                            </a>
-                            <a href="<?php echo site_url('menus'); ?>" class="list-group-item">
-                                <span class=""><?php echo lang('text_menus_progress'); ?></span>
-                            </a>
-                            <a href="<?php echo site_url('themes'); ?>" class="list-group-item">
-                                <span class=""><?php echo lang('text_design_progress'); ?></span>
-                            </a>
-                            <a href="<?php echo site_url('settings#mail'); ?>" class="list-group-item">
-                                <span class=""><?php echo lang('text_email_progress'); ?></span>
-                            </a>
-                        </div>
-                        <div class="panel-footer"></div>
-                    </div>
+					
 
                     <div class="panel panel-default panel-activities">
                         <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-clock-o"></i>&nbsp;&nbsp;<?php echo lang('text_recent_activity'); ?></h3></div>
@@ -190,20 +170,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6">
-                    <?php if ($news_feed) { ?>
-                        <div class="panel panel-default panel-news-feed">
-                            <div class="panel-heading"><h3 class="panel-title"><i class="fa fa-rss"></i>&nbsp;&nbsp;<?php echo lang('text_news'); ?></h3></div>
-                            <div class="list-group">
-                                <?php foreach ($news_feed as $feed) { ?>
-                                    <a class="list-group-item" target="_blank" href="<?php echo $feed['link']; ?>">
-                                        <h5 class="text-primary"><?php echo $feed['title']; ?></h5>
-                                        <span class="text-muted"><?php echo strip_tags(substr($feed['description'], 0, 75)).'...'; ?></span>
-                                    </a>
-                                <?php } ?>
-                            </div>
-                            <div class="panel-footer"></div>
-                        </div>
-                    <?php } ?>
+                    
 
                     <?php if ($top_customers) { ?>
                         <div class="panel panel-default panel-top-customers">
