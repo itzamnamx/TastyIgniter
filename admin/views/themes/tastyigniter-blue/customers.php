@@ -81,6 +81,7 @@
 							<a class="btn btn-edit" title="<?php echo lang('text_edit'); ?>" href="<?php echo $customer['edit']; ?>"><i class="fa fa-pencil"></i></a></td>
 						<td><?php echo $customer['first_name']; ?></td>
 						<td><?php echo $customer['last_name']; ?></td>
+                                                <td><?php echo $customer['last_name2']; ?></td>
 						<td><?php echo $customer['email']; ?></td>
 						<td><?php echo $customer['telephone']; ?></td>
 						<td><?php echo $customer['date_added']; ?></td>

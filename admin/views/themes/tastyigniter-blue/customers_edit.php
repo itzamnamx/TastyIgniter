@@ -25,6 +25,13 @@
 							<?php echo form_error('last_name', '<span class="text-danger">', '</span>'); ?>
 						</div>
 					</div>
+                                        <div class="form-group">
+						<label for="input-last-name2" class="col-sm-3 control-label"><?php echo lang('label_last_name2'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="last_name2" id="input-last-name2" class="form-control" value="<?php echo set_value('last_name2', $last_name2); ?>" />
+							<?php echo form_error('last_name2', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
 					<div class="form-group">
 						<label for="input-email" class="col-sm-3 control-label"><?php echo lang('label_email'); ?></label>
 						<div class="col-sm-5">

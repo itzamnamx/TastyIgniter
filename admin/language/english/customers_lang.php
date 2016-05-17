@@ -11,8 +11,8 @@ $lang['text_filter_status'] 		    = 'View all status';
 $lang['text_filter_date'] 		        = 'View all dates';
 $lang['text_empty'] 		            = 'No hay clientes registrados.';
 $lang['text_no_match'] 		            = 'No se encontraron coincidencias';
-$lang['text_subscribe'] 		        = 'Alta Suscripción';
-$lang['text_un_subscribe'] 		        = 'Baja Suscripción';
+$lang['text_subscribe'] 		        = 'Alta';
+$lang['text_un_subscribe'] 		        = 'Baja';
 
 $lang['column_first_name'] 		        = 'Nombre(s)';
 $lang['column_last_name'] 		        = 'Apellido Paterno';
