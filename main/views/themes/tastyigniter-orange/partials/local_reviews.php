@@ -6,13 +6,13 @@
                 <p class="review-text"><?php echo $review['text']; ?></p>
                 <div class="rating-row row">
                     <div class="col-xs-4 col-sm-3">
-                        <b>Quality:</b><div class="rating rating-star" data-score="<?php echo $review['quality']; ?>" data-readonly="true"></div>
+                        <b>Calidad:</b><div class="rating rating-star" data-score="<?php echo $review['quality']; ?>" data-readonly="true"></div>
                     </div>
                     <div class="col-xs-4 col-sm-3">
-                        <b>Delivery:</b><div class="rating rating-star" data-score="<?php echo $review['delivery']; ?>" data-readonly="true"></div>
+                        <b>Envio:</b><div class="rating rating-star" data-score="<?php echo $review['delivery']; ?>" data-readonly="true"></div>
                     </div>
                     <div class="col-xs-4 col-sm-3">
-                        <b>Service:</b><div class="rating rating-star" data-score="<?php echo $review['service']; ?>" data-readonly="true"></div>
+                        <b>Servicio:</b><div class="rating rating-star" data-score="<?php echo $review['service']; ?>" data-readonly="true"></div>
                     </div>
                 </div>
                 <small>

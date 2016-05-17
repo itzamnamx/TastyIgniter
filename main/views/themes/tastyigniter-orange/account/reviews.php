@@ -50,11 +50,11 @@
 										<td><?php echo $review['location_name']; ?></td>
 										<td>
 											<dl class="dl-horizontal dl-horizontal-rating">
-												<dt><b>Quality:</b></dt>
+												<dt><b>Calidad:</b></dt>
 												<dd><div class="rating rating-star" data-score="<?php echo $review['quality']; ?>" data-readonly="true"></div></dd>
-												<dt><b>Delivery:</b></dt>
+												<dt><b>Envio:</b></dt>
 												<dd><div class="rating rating-star" data-score="<?php echo $review['delivery']; ?>" data-readonly="true"></div></dd>
-												<dt><b>Service:</b></dt>
+												<dt><b>Servicio:</b></dt>
 												<dd><div class="rating rating-star" data-score="<?php echo $review['service']; ?>" data-readonly="true"></div></dd>
 											</dl>
 										</td>

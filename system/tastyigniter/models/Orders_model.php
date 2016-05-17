@@ -436,9 +436,9 @@ class Orders_model extends TI_Model {
 
 				$order_totals = array(
 					'cart_total'  => array('title' => 'Sub Total', 'value' => (isset($cart_contents['cart_total'])) ? $cart_contents['cart_total'] : '', 'priority' => '1'),
-					'order_total' => array('title' => 'Order Total', 'value' => (isset($cart_contents['order_total'])) ? $cart_contents['order_total'] : '', 'priority' => '5'),
-					'delivery'    => array('title' => 'Delivery', 'value' => (isset($cart_contents['delivery'])) ? $cart_contents['delivery'] : '', 'priority' => '3'),
-					'coupon'      => array('title' => 'Coupon (' . $cart_contents['coupon']['code'] . ') ', 'value' => $cart_contents['coupon']['discount'], 'priority' => '2'),
+					'order_total' => array('title' => 'Total', 'value' => (isset($cart_contents['order_total'])) ? $cart_contents['order_total'] : '', 'priority' => '5'),
+					'delivery'    => array('title' => 'Envio', 'value' => (isset($cart_contents['delivery'])) ? $cart_contents['delivery'] : '', 'priority' => '3'),
+					'coupon'      => array('title' => 'Cupon (' . $cart_contents['coupon']['code'] . ') ', 'value' => $cart_contents['coupon']['discount'], 'priority' => '2'),
 				);
 
 				if (!empty($cart_contents['taxes'])) {
