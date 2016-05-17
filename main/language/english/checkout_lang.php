@@ -56,7 +56,7 @@ $lang['button_agree_terms']             = 'Estoy de Acuerdo';
 $lang['error_delivery_unavailable']     = 'Delivery is unavailable at the selected restaurant!';
 $lang['error_collection_unavailable']   = 'Pick-up is unavailable at the selected restaurant!';
 $lang['error_covered_area']             = 'Este comedor no realiza envios a tu dirección';
-$lang['error_delivery_less_current_time'] = 'The Delivery or Pick-up Time can not be less than current time!';
+$lang['error_delivery_less_current_time'] = 'La fecha y horario de entrega o para recoger no puede ser menor a la fecha y horario actual!';
 $lang['error_no_delivery_time']         = 'The selected delivery time is outside our opening/closing hours';
 $lang['error_invalid_payment']          = 'The selected payment is invalid, please contact us';
 
