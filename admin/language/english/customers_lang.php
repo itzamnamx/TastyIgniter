@@ -1,11 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['text_title'] 		            = 'Customers';
-$lang['text_heading'] 		            = 'Customers';
-$lang['text_edit_heading'] 		        = 'Customer: %s';
-$lang['text_list'] 		                = 'Customer List';
-$lang['text_tab_general'] 		        = 'Customer';
-$lang['text_tab_address'] 		        = 'Address';
+$lang['text_title'] 		            = 'Clientes';
+$lang['text_heading'] 		            = 'Clientes';
+$lang['text_edit_heading'] 		        = 'Cliente: %s';
+$lang['text_list'] 		                = 'Lista de Clientes';
+$lang['text_tab_general'] 		        = 'Cliente';
+$lang['text_tab_address'] 		        = 'Dirección';
 $lang['text_filter_search'] 		    = 'Search author, restaurant, order id or rating.';
 $lang['text_filter_status'] 		    = 'View all status';
 $lang['text_filter_date'] 		        = 'View all dates';
