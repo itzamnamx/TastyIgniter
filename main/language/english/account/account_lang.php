@@ -28,8 +28,8 @@ $lang['column_cart_items'] 		        = 'Total de Platillos';
 $lang['column_cart_total'] 		        = 'Total a Pagar';
 $lang['column_id'] 				        = 'ID';
 $lang['column_date'] 			        = 'Fecha/Hora';
-$lang['column_status'] 			        = 'Status';
-$lang['column_subject'] 		        = 'Subject';
+$lang['column_status'] 			        = 'Estado';
+$lang['column_subject'] 		        = 'Título';
 
 /* End of file account_lang.php */
 /* Location: ./main/language/english/main/account_lang.php */

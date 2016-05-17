@@ -10,7 +10,7 @@ $lang['text_address'] 			= 'Libretra de Direcciones';
 $lang['text_orders'] 			= 'Ordenes Recientes';
 $lang['text_reservations'] 		= 'Reservaciones Recientes';
 $lang['text_reviews'] 			= 'Calificaciones Recientes';
-$lang['text_inbox'] 			= 'Mi Inbox <span class="badge">%s</span>';
+$lang['text_inbox'] 			= 'Mi Buzón <span class="badge">%s</span>';
 $lang['text_logout'] 			= 'Salir';
 
 $lang['label_heading'] 			= 'Heading:';
