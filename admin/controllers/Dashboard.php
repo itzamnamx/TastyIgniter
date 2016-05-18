@@ -18,7 +18,7 @@ class Dashboard extends Admin_Controller {
 	public function index() {
 		$this->template->setTitle($this->lang->line('text_title'));
 		$this->template->setHeading($this->lang->line('text_heading'));
-		$this->template->setButton($this->lang->line('button_check_updates'), array('class' => 'btn btn-default', 'href' => site_url('updates')));
+		//$this->template->setButton($this->lang->line('button_check_updates'), array('class' => 'btn btn-default', 'href' => site_url('updates')));
 
         $this->template->setStyleTag(root_url('assets/js/daterange/daterangepicker-bs3.css'), 'daterangepicker-css', '100400');
         $this->template->setScriptTag(root_url('assets/js/daterange/moment.min.js'), 'daterange-moment-js', '1000451');
@@ -157,7 +157,7 @@ class Dashboard extends Admin_Controller {
 		$json = array();
 		$results = array();
 
-        $json['labels'] = array('Clientes Totales', 'Ordenes Totales', 'Reservaciones Totales', 'Total de Opiniones');
+        $json['labels'] = array('Total de Clientes', 'Total de Ordenes', 'Total de Reservaciones', 'Total de Opiniones');
         $json['colors'] = array('#63ADD0', '#5CB85C', '#337AB7', '#D9534F');
 
         $dateRanges = '1';

@@ -31,7 +31,7 @@ $lang['text_settings_progress'] 		    = '<b>Your restaurant settings</b> - Let y
 $lang['text_menus_progress'] 		        = '<b>Add Menus</b> - Add your menu using our simple editor. Display multiple menus like delivery &amp; eat-in, includes sizes and meal options';
 $lang['text_design_progress'] 		        = '<b>Design your website background</b> - Upload your own or choose a background image for your website from our gallery.';
 $lang['text_email_progress'] 		        = '<b>Send test email</b> - Ensure order confirmation emails are sent to customers successfully.';
-$lang['text_statistic'] 		            = 'Statistics';
+$lang['text_statistic'] 		            = 'Estadisticas';
 $lang['text_range'] 		                = 'Rango';
 $lang['text_today'] 		                = 'Hoy';
 $lang['text_week'] 		                    = 'Semana';
@@ -41,21 +41,21 @@ $lang['text_news'] 		                    = 'Noticias del Comedor';
 $lang['text_recent_activity'] 		        = 'Actividad Reciente';
 $lang['text_top_customers'] 		        = 'Mejores Clientes';
 $lang['text_latest_order'] 		            = 'Ultimas 10 Ordenes';
-$lang['text_reports_chart'] 		        = 'Reports Chart';
-$lang['text_select_range'] 		            = 'Select date range';
+$lang['text_reports_chart'] 		        = 'Reporte Gráfico';
+$lang['text_select_range'] 		            = 'Selecciona un rango de fechas';
 $lang['text_last_version_check'] 		    = 'Your last <b>TastyIgniter core version check</b> was more than a week ago. <a href="%s"><b>Check for Updates</b></a>';
 
 $lang['button_check_updates']       	    = '<i class="fa fa-refresh"></i> Check Updates';
 
 $lang['column_id']       		            = 'ID';
-$lang['column_location'] 		            = 'Location';
-$lang['column_name'] 		                = 'Customer Name';
-$lang['column_status'] 		                = 'Status';
-$lang['column_type'] 		                = 'Type';
-$lang['column_ready_type'] 		            = 'Ready Time';
-$lang['column_date_added'] 		            = 'Date Added';
-$lang['column_total_orders'] 		        = '# Orders';
-$lang['column_total_sale'] 		            = 'Total Sale';
+$lang['column_location'] 		            = 'Comedor';
+$lang['column_name'] 		                = 'Nombre del Cliente';
+$lang['column_status'] 		                = 'Estado';
+$lang['column_type'] 		                = 'Tipo';
+$lang['column_ready_type'] 		            = 'Hora de Entrega';
+$lang['column_date_added'] 		            = 'Fecha';
+$lang['column_total_orders'] 		        = '# Ordenes';
+$lang['column_total_sale'] 		            = 'Consumo Total';
 
 /* End of file dashboard_lang.php */
 /* Location: ./admin/language/english/dashboard_lang.php */

@@ -285,12 +285,12 @@ $(document).ready(function() {
         endDate: moment(),
         showDropdowns: true,
         ranges: {
-            'Today': [moment(), moment()],
-            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-            'This Month': [moment().startOf('month'), moment().endOf('month')],
-            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            'Hoy': [moment(), moment()],
+            'Ayer': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Últimos 7 Dias': [moment().subtract(6, 'days'), moment()],
+            'Últimos 30 Dias': [moment().subtract(29, 'days'), moment()],
+            'Este Mes': [moment().startOf('month'), moment().endOf('month')],
+            'El Último Mes': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         },
         opens: 'left',
         buttonClasses: ['btn', 'btn-xs'],
@@ -298,13 +298,13 @@ $(document).ready(function() {
         cancelClass: 'btn-default',
         separator: ' to ',
         locale: {
-            applyLabel: 'Submit',
-            cancelLabel: 'Cancel',
-            fromLabel: 'From',
-            toLabel: 'To',
-            customRangeLabel: 'Custom',
-            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            applyLabel: 'Enviar',
+            cancelLabel: 'Cancelar',
+            fromLabel: 'Desde',
+            toLabel: 'Hasta',
+            customRangeLabel: 'Personalizado',
+            daysOfWeek: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi','Sa'],
+            monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Deciembre'],
             firstDay: 1
         }
     }, function(start, end, label) {
@@ -323,8 +323,8 @@ $(document).ready(function() {
 });
 
 var monthNames = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-    "Aug", "Sep", "Oct", "Nov", "Dec"
+    "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul",
+    "Ago", "Sep", "Oct", "Nov", "Dic"
 ];
 
 var myAreaChart = Morris.Area({
@@ -332,7 +332,7 @@ var myAreaChart = Morris.Area({
     data: [],
     xkey: 'time',
     ykeys: ['customers', 'orders', 'reservations', 'reviews'],
-    labels: ['Total customer', 'Total order', 'Total reservation', 'Total reviews'],
+    labels: ['Total de Clientes', 'Total de Ordenes', 'Total de Reservaciones', 'Total de Opiniones'],
     lineColors: ['#63ADD0', '#5CB85C', '#337AB7', '#D9534F'],
     parseTime: false,
     behaveLikeLine: false,

@@ -90,7 +90,7 @@ if ( ! function_exists('day_elapsed')) {
         if (mdate('%d %M', $datetime) === mdate('%d %M', time())) {
             return 'Hoy';
         } else if (mdate('%d %M', $datetime) === mdate('%d %M', strtotime('yesterday'))) {
-            return 'Yesterday';
+            return 'Ayer';
         }
 
         if (mdate('%Y', $datetime) === mdate('%Y', time())) {

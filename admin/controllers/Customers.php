@@ -96,7 +96,7 @@ class Customers extends Admin_Controller {
 				'email' 			=> $result['email'],
 				'telephone' 		=> $result['telephone'],
 				'date_added' 		=> day_elapsed($result['date_added']),
-				'status' 			=> ($result['status'] === '1') ? 'Enabled' : 'Disabled',
+				'status' 			=> ($result['status'] === '1') ? 'Activo' : 'Inactivo',
 				'edit' 				=> site_url('customers/edit?id=' . $result['customer_id'])
 			);
 		}
