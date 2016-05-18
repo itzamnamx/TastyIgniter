@@ -19,7 +19,7 @@ class Login extends Admin_Controller {
                 $this->alert->set('danger', $this->lang->line('alert_username_not_found'));
                 redirect(current_url());
             } else {
-                log_activity($this->user->getStaffId(), 'logged in', 'staffs', get_activity_message('activity_logged_in',
+                log_activity($this->user->getStaffId(), 'ha entrado al sistema', 'staffs', get_activity_message('activity_logged_in',
                     array('{staff}', '{link}'),
                     array($this->user->getStaffName(), admin_url('staffs/edit?id='.$this->user->getStaffId()))
                 ));

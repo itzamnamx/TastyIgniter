@@ -9,7 +9,7 @@ class Logout extends Admin_Controller {
 	public function index() {
         $this->lang->load('login');
 
-        log_activity($this->user->getStaffId(), 'logged out', 'staffs', get_activity_message('activity_logged_out',
+        log_activity($this->user->getStaffId(), 'ha salido del sistema', 'staffs', get_activity_message('activity_logged_out',
             array('{staff}', '{link}'),
             array($this->user->getStaffName(), admin_url('staffs/edit?id='.$this->user->getStaffId()))
         ));

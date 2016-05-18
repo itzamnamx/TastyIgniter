@@ -36,7 +36,7 @@ $lang['button_register'] 		= 'Registro';
 $lang['error_email_exist'] 		= 'The Email address already has an account, please log in';
 $lang['error_captcha'] 		    = 'The letters you entered does not match the image.';
 
-$lang['alert_logout_success'] 	= '<p class="alert-success">You have been logged out successfully.</p>';
+$lang['alert_logout_success'] 	= '<p class="alert-success">Has cerrado tu sesión correctamente.</p>';
 $lang['alert_invalid_login'] 	= '<p class="alert-danger">Usuario y/o Password incorrectos</p>';
 $lang['alert_account_created'] 	= '<p class="alert-success">Account created successfully, login below!</p>';
 
