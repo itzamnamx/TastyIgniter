@@ -269,9 +269,10 @@ class Customers extends Admin_Controller {
 	}
 
 	private function validateForm($customer_email = FALSE) {
-		$this->form_validation->set_rules('first_name', 'lang:label_first_name', 'xss_clean|trim|required|min_length[2]|max_length[12]');
-                $this->form_validation->set_rules('card_id', 'lang:label_card_id', 'xss_clean|trim|required|min_length[2]|max_length[24]');
+		$this->form_validation->set_rules('first_name', 'lang:label_first_name', 'xss_clean|trim|required|min_length[2]|max_length[12]');                
 		$this->form_validation->set_rules('last_name', 'lang:label_last_name', 'xss_clean|trim|required|min_length[2]|max_length[12]');
+                $this->form_validation->set_rules('last_name2', 'lang:label_last_name2', 'xss_clean|trim|required|min_length[2]|max_length[12]');
+                $this->form_validation->set_rules('card_id', 'lang:label_card_id', 'xss_clean|trim|required|integer');
 
 		if ($customer_email !== $this->input->post('email')) {
 			$this->form_validation->set_rules('email', 'lang:label_email', 'xss_clean|trim|required|valid_email|max_length[96]|is_unique[customers.email]');
