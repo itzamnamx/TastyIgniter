@@ -35,7 +35,7 @@
                                         <div class="form-group">
 						<label for="input-card-id" class="col-sm-3 control-label"><?php echo lang('label_card_id'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" name="label_card_id" id="input-card-id" class="form-control" value="<?php echo set_value('card_id', $card_id); ?>" />
+							<input type="text" name="card_id" id="input-card-id" class="form-control" value="<?php echo set_value('card_id', $card_id); ?>" />
 							<?php echo form_error('card_id', '<span class="text-danger">', '</span>'); ?>
 						</div>
 					</div>
