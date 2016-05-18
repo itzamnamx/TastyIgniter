@@ -29,22 +29,22 @@ $lang['label_last_name'] 		        = 'Apellido Paterno';
 $lang['label_last_name2'] 		        = 'Apellido Materno';
 $lang['label_card_id']                       = 'Número de Credencial';
 $lang['label_email'] 		            = 'Email';
-$lang['label_password'] 		        = 'Password';
-$lang['label_confirm_password'] 		= 'Confirmar Password';
+$lang['label_password'] 		        = 'Clave';
+$lang['label_confirm_password'] 		= 'Confirmar Clave';
 $lang['label_telephone'] 		        = 'Teléfono';
 $lang['label_security_question'] 		= 'Pregunta de Seguridad';
 $lang['label_security_answer'] 		    = 'Respuesta de Seguridad';
 $lang['label_newsletter'] 		        = 'Notificaciones';
-$lang['label_customer_group'] 		    = 'Customer Group';
+$lang['label_customer_group'] 		    = 'Empresa';
 $lang['label_status'] 		            = 'Status';
-$lang['label_address_1'] 		        = 'Address 1';
-$lang['label_address_2'] 		        = 'Address 2';
-$lang['label_city'] 		            = 'City';
-$lang['label_state'] 		            = 'State';
-$lang['label_postcode'] 		        = 'Postcode';
-$lang['label_country'] 		            = 'Country';
+$lang['label_address_1'] 		        = 'Dirección 1';
+$lang['label_address_2'] 		        = 'Dirección 2';
+$lang['label_city'] 		            = 'Ciudad';
+$lang['label_state'] 		            = 'Estado';
+$lang['label_postcode'] 		        = 'Código Postal';
+$lang['label_country'] 		            = 'País';
 
-$lang['help_password'] 		            = 'Leave blank to leave password unchanged';
+$lang['help_password'] 		            = 'Dejar en blanco para no modificarlo';
 
 /* End of file customers_lang.php */
 /* Location: ./admin/language/english/customers_lang.php */

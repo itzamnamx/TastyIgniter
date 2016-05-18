@@ -32,6 +32,13 @@
 							<?php echo form_error('last_name2', '<span class="text-danger">', '</span>'); ?>
 						</div>
 					</div>
+                                        <div class="form-group">
+						<label for="input-card-id" class="col-sm-3 control-label"><?php echo lang('label_card_id'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="label_card_id" id="input-card-id" class="form-control" value="<?php echo set_value('card_id', $card_id); ?>" />
+							<?php echo form_error('card_id', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
 					<div class="form-group">
 						<label for="input-email" class="col-sm-3 control-label"><?php echo lang('label_email'); ?></label>
 						<div class="col-sm-5">
