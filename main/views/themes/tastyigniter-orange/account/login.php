@@ -49,9 +49,9 @@
                                     <div class="col-md-5 wrap-none">
                                         <a class="btn btn-link btn-lg" href="<?php echo $reset_url; ?>"><span class="small"><small><?php echo lang('text_forgot'); ?></small></span></a>
                                     </div>
-                                    <div class="col-md-7">
+                                    <!--<div class="col-md-7">
                                         <a class="btn btn-default btn-block btn-lg" href="<?php echo $register_url; ?>"><?php echo lang('button_register'); ?></a>
-                                    </div>
+                                    </div>-->
 								</div>
 							</div>
 						</fieldset>
