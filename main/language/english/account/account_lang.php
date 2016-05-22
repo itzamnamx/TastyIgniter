@@ -3,7 +3,7 @@
 $lang['text_heading'] 			        = 'Mi Cuenta';
 $lang['text_my_details'] 		        = 'Mis Detalles';
 $lang['text_default_address'] 	        = 'Mi Direccion de Envio';
-$lang['text_cart'] 				        = 'Mi Ordenes';
+$lang['text_cart'] 				        = 'Mi Carrito';
 $lang['text_orders'] 			        = 'Mis Ordenes';
 $lang['text_reservations'] 		        = 'Mis Reservaciones';
 $lang['text_inbox'] 			        = 'Mi Buzón';
@@ -11,7 +11,7 @@ $lang['text_edit'] 			            = 'EDITAR';
 $lang['text_checkout'] 			        = 'PAGAR AHORA';
 $lang['text_change_password'] 			= 'Cambiar Password';
 $lang['text_no_default_address'] 	    = 'No tienes ninguna direccion registrada, es requerida para realizar envios de tus pedidos';
-$lang['text_no_cart_items'] 	        = 'No hay Ordenes.';
+$lang['text_no_cart_items'] 	        = 'No hay Ordenes de Menu en el Carrito de Compras.';
 $lang['text_no_orders'] 	            = 'No hay Ordenes.';
 $lang['text_no_reservations'] 	        = 'No hay Reservaciones.';
 $lang['text_no_inbox'] 	                = 'No hay mensajes para mostrar';
