@@ -1,12 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['text_heading'] 			        = 'Ordenes Recientes';
+$lang['text_heading'] 			        = 'Transacciones Recientes';
 $lang['text_my_account'] 		        = 'Mi Cuenta';
-$lang['text_view_heading'] 		        = 'Ver Mis Ordenes';
-$lang['text_order_menus'] 			= 'Menus Ordenados';
-$lang['text_empty'] 			        = 'No hay Orden(es).';
-$lang['text_delivery'] 			        = 'Envio';
-$lang['text_collection'] 		        = 'Para llevar';
+$lang['text_view_heading'] 		        = 'Ver Mis Transacciones';
+$lang['text_order_menus'] 			= 'Transacción Realizada';
+$lang['text_empty'] 			        = 'No hay Transacción(es).';
+$lang['text_deposit'] 			        = 'Abono';
+$lang['text_charge']                            = 'Cargo';
 $lang['text_reorder'] 			        = 'Ordenar nuevamente';
 $lang['text_leave_review'] 		        = 'Calificar';
 

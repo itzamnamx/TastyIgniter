@@ -6,6 +6,7 @@
 				<a href="<?php echo site_url('account/details'); ?>" class="list-group-item <?php echo ($page === 'details') ? 'active' : ''; ?>"><span class="fa fa-edit"></span>&nbsp;&nbsp;&nbsp;<?php echo lang('text_edit_details'); ?></a>
 				<a href="<?php echo site_url('account/address'); ?>" class="list-group-item <?php echo ($page === 'address') ? 'active' : ''; ?>"><span class="fa fa-book"></span>&nbsp;&nbsp;&nbsp;<?php echo lang('text_address'); ?></a>
 				<a href="<?php echo site_url('account/orders'); ?>" class="list-group-item <?php echo ($page === 'orders') ? 'active' : ''; ?>"><span class="fa fa-list-alt"></span>&nbsp;&nbsp;&nbsp;<?php echo lang('text_orders'); ?></a>
+                                <a href="<?php echo site_url('account/transactions'); ?>" class="list-group-item <?php echo ($page === 'transactions') ? 'active' : ''; ?>"><span class="fa fa-list-alt"></span>&nbsp;&nbsp;&nbsp;<?php echo lang('text_transactions'); ?></a>
 
 				<?php if (config_item('reservation_mode') === '1') { ?>
 					<a href="<?php echo site_url('account/reservations'); ?>" class="list-group-item <?php echo ($page === 'reservations') ? 'active' : ''; ?>"><span class="fa fa-calendar"></span>&nbsp;&nbsp;&nbsp;<?php echo lang('text_reservations'); ?></a>

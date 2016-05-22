@@ -13,6 +13,7 @@ $lang['text_change_password'] 			= 'Cambiar Password';
 $lang['text_no_default_address'] 	    = 'No tienes ninguna direccion registrada, es requerida para realizar envios de tus pedidos';
 $lang['text_no_cart_items'] 	        = 'No hay Ordenes de Menu en el Carrito de Compras.';
 $lang['text_no_orders'] 	            = 'No hay Ordenes.';
+$lang['text_no_transactions'] 	            = 'No hay Transacciones.';
 $lang['text_no_reservations'] 	        = 'No hay Reservaciones.';
 $lang['text_no_inbox'] 	                = 'No hay mensajes para mostrar';
 
