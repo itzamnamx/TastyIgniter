@@ -1,0 +1,201 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
+
+class Transactions extends Main_Controller {
+
+	public function __construct() {
+		parent::__construct(); 																	//  calls the constructor
+
+        if (!$this->customer->isLogged()) {  													// if customer is not logged in redirect to account login page
+            redirect('account/login');
+        }
+
+        $this->load->model('Transactions_model');														// load transactions model
+        $this->load->model('Addresses_model');														// load addresses model
+
+		$this->load->library('currency'); 														// load the currency library
+
+        $this->lang->load('account/transactions');
+	}
+
+	public function index() {
+		$url = '?';
+		$filter = array();
+		$filter['customer_id'] = (int) $this->customer->getId();
+
+		if ($this->input->get('page')) {
+			$filter['page'] = (int) $this->input->get('page');
+		} else {
+			$filter['page'] = '';
+		}
+
+		if ($this->config->item('page_limit')) {
+			$filter['limit'] = $this->config->item('page_limit');
+		}
+
+        $filter['sort_by'] = $data['sort_by'] = 'date_added';
+        $filter['order_by'] = $data['order_by'] = 'DESC';
+
+        $this->template->setBreadcrumb('<i class="fa fa-home"></i>', '/');
+        $this->template->setBreadcrumb($this->lang->line('text_my_account'), 'account/account');
+        $this->template->setBreadcrumb($this->lang->line('text_heading'), 'account/transactions');
+
+		$this->template->setTitle($this->lang->line('text_heading'));
+		$this->template->setHeading($this->lang->line('text_heading'));
+
+		$data['back_url'] 				= site_url('account/account');
+
+        $this->load->library('location');
+        if ($this->location->local()) {
+            $data['new_transaction_url'] = site_url('local?location_id='.$this->location->getId());
+        } else {
+            $data['new_transaction_url'] = site_url('local/all');
+        }
+		$time_format = ($this->config->item('time_format')) ? $this->config->item('time_format') : '%h:%i %a';
+
+		$data['transactions'] = array();
+		$results = $this->Transctions_model->getList($filter);			// retrieve customer transactions based on customer id from getMainTransactions method in Transactions model
+		foreach ($results as $result) {
+
+			// if transaction type is equal to 1, transaction type is delivery else collection
+            $transaction_type = ($result['transaction_type'] === '1') ? $this->lang->line('text_delivery') : $this->lang->line('text_collection');
+
+			$data['transactions'][] = array(															// create array of customer transactions to pass to view
+				'transaction_id' 				=> $result['transaction_id'],
+				'location_name' 		=> $result['location_name'],
+				'date_added' 			=> day_elapsed($result['date_added']),
+				'transaction_time'			=> mdate($time_format, strtotime($result['transaction_time'])),
+				'total_items'			=> $result['total_items'],
+				'transaction_total' 			=> $this->currency->format($result['transaction_total']),		// add currency symbol and format transaction total to two decimal places
+				'transaction_type' 			=> ucwords(strtolower($transaction_type)),					// convert string to lower case and capitalize first letter
+				'status_name' 			=> $result['status_name'],
+				'view' 					=> site_url('account/transactions/view/' . $result['transaction_id']),
+				'reorder' 				=> site_url('account/transactions/reorder/'. $result['transaction_id'] .'/'. $result['location_id']),
+				'leave_review' 			=> site_url('account/reviews/add/transaction/'. $result['transaction_id'] .'/'. $result['location_id'])
+			);
+		}
+
+		$prefs['base_url'] 			= site_url('account/transactions'.$url);
+		$prefs['total_rows'] 		= $this->Transactions_model->getCount($filter);
+		$prefs['per_page'] 			= $filter['limit'];
+
+		$this->load->library('pagination');
+		$this->pagination->initialize($prefs);
+
+		$data['pagination'] = array(
+			'info'		=> $this->pagination->create_infos(),
+			'links'		=> $this->pagination->create_links()
+		);
+
+		$this->template->render('account/transactions', $data);
+	}
+
+	public function view() {
+		if ($result = $this->Transactions_model->getTransaction($this->uri->rsegment(3), $this->customer->getId())) {															// check if customer_id is set in uri string
+			$transaction_id = (int)$this->uri->rsegment(3);
+		} else {
+  			redirect('account/transactions');
+		}
+
+	$this->template->setBreadcrumb('<i class="fa fa-home"></i>', '/');
+        $this->template->setBreadcrumb($this->lang->line('text_my_account'), 'account/account');
+        $this->template->setBreadcrumb($this->lang->line('text_heading'), 'account/transactions');
+	$this->template->setBreadcrumb($this->lang->line('text_view_heading'), 'account/transactions/view');
+
+	$this->template->setTitle($this->lang->line('text_view_heading'));
+	$this->template->setHeading($this->lang->line('text_view_heading'));
+
+	$data['reorder_url'] 			= site_url('account/transactions/reorder/'. $transaction_id .'/'. $result['location_id']);
+	$data['back_url'] 				= site_url('account/transactions');
+
+	$date_format = ($this->config->item('date_format')) ? $this->config->item('date_format') : '%d %M %y';
+	$time_format = ($this->config->item('time_format')) ? $this->config->item('time_format') : '%h:%i %a';
+
+	$data['transaction_id'] 		        = $result['transaction_id'];
+        $data['date_added'] 	        = mdate($date_format, strtotime($result['date_added']));
+        $data['transaction_time'] 	        = mdate($time_format, strtotime($result['transaction_time']));
+        $data['transaction_type'] 		    = $result['transaction_type'];
+
+        $this->load->library('country');
+        $this->load->model('Locations_model');														// load transactions model
+        $location_address = $this->Locations_model->getAddress($result['location_id']);
+
+        $data['location_name'] = ($location_address) ? $location_address['location_name'] : '';
+        $data['location_address'] = ($location_address) ? $this->country->addressFormat($location_address) : '';
+
+        $delivery_address = $this->Addresses_model->getAddress($result['customer_id'], $result['address_id']);
+        $data['delivery_address'] = $this->country->addressFormat($delivery_address);
+
+        $data['menus'] = array();
+        $transaction_menus = $this->Transactions_model->getTransactionMenus($result['transaction_id']);
+		$transaction_menu_options = $this->Transaction_model->getTransactionMenuOptions($result['transaction_id']);
+		foreach ($transaction_menus as $transaction_menu) {
+            $option_data = array();
+
+			if (!empty($transaction_menu_options)) {
+				foreach ($transaction_menu_options as $menu_option) {
+					if ($transaction_menu['transaction_menu_id'] === $menu_option['transaction_menu_id']) {
+						$option_data[] = $menu_option['transaction_option_name'] . $this->lang->line('text_equals') . $this->currency->format($menu_option['transaction_option_price']);
+					}
+				}
+			}
+
+            $data['menus'][] = array(
+                'id' 			=> $transaction_menu['menu_id'],
+                'name' 			=> $transaction_menu['name'],
+                'qty' 			=> $transaction_menu['quantity'],
+                'price' 		=> $this->currency->format($transaction_menu['price']),
+                'subtotal' 		=> $this->currency->format($transaction_menu['subtotal']),
+				'comment' 		=> $transaction_menu['comment'],
+				'options'		=> implode(', ', $option_data)
+            );
+        }
+
+        $data['totals'] = array();
+        $transaction_totals = $this->Transactions_model->getTransactionTotals($result['transaction_id']);
+		foreach (array('cart_total', 'coupon', 'delivery', 'taxes') as $key) {
+			foreach ($transaction_totals as $total) {
+	            if ($key == $total['code'] AND $total['code'] !== 'transaction_total') {
+	                $data['totals'][] = array(
+	                    'title' => $total['title'],
+	                    'value' => $this->currency->format($total['value'])
+	                );
+	            }
+	        }
+        }
+
+        $data['transaction_total'] 		= $this->currency->format($result['transaction_total']);
+        $data['total_items']		= $result['total_items'];
+
+		if ($payment = $this->extension->getPayment($result['payment'])) {
+			$data['payment'] = !empty($payment['ext_data']['title']) ? $payment['ext_data']['title']: $payment['title'];
+		} else {
+			$data['payment'] = 'No Payment';
+		}
+
+		$this->template->render('account/transactions_view', $data);
+	}
+
+	public function reorder() {
+		$this->load->library('cart'); 															// load the cart library
+		if ($transaction_menus = $this->Transactions_model->getTransactionMenus($this->uri->rsegment(3))) {
+			foreach ($transaction_menus as $menu) {
+                $this->cart->insert(array(
+					'id' 			=> $menu['menu_id'],
+					'name' 			=> $menu['name'],
+					'qty' 			=> $menu['quantity'],
+					'price' 		=> $menu['price'],
+					'comment' 		=> $menu['comment'],
+					'options'		=> (!empty($menu['option_values'])) ? unserialize($menu['option_values']) : array()
+				));
+			}
+
+			$this->alert->set('alert', sprintf($this->lang->line('alert_reorder_success'), $this->uri->rsegment(3)));
+			redirect('local?location_id='.$this->uri->rsegment(4));
+		} else {
+  			redirect('account/transactions');
+		}
+	}
+}
+
+/* End of file transactions.php */
+/* Location: ./main/controllers/transactions.php */
