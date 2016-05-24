@@ -185,9 +185,9 @@
 							<li><a href="<?php echo $staff_edit; ?>"><i class="fa fa-user fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_edit_details'); ?></a></li>
 							<li><a class="list-group-item-danger" href="<?php echo $logout; ?>"><i class="fa fa-power-off fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_logout'); ?></a></li>
 							<li class="divider"></li>
-							<li><a href="http://tastyigniter.com/about/" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_about_tastyigniter'); ?></a></li>
-							<li><a href="http://docs.tastyigniter.com" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_documentation'); ?></a></li>
-							<li><a href="http://forum.tastyigniter.com" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_community_support'); ?></a></li>
+							<li><a href="http://www.dsnibble.com.mx" target="_blank"><i class="fa fa-info-circle fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_about_tastyigniter'); ?></a></li>
+							<li><a href="http://www.dsnibble.com.mx" target="_blank"><i class="fa fa-book fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_documentation'); ?></a></li>
+							<li><a href="http://www.dsnibble.com.mx" target="_blank"><i class="fa fa-users fa-fw"></i>&nbsp;&nbsp;<?php echo lang('text_community_support'); ?></a></li>
 							<li class="menu-footer"></li>
 						</ul>
 					</li>
