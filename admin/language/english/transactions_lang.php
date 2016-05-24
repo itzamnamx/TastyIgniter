@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['text_title'] 		            = 'Ordenes';
-$lang['text_heading'] 		            = 'Ordenes';
+$lang['text_title'] 		            = 'Transacciones';
+$lang['text_heading'] 		            = 'Transacciones';
 $lang['text_edit_heading'] 		        = 'Orden: %s';
 $lang['text_invoice_heading'] 		    = 'Factura de Orden: %s';
 $lang['text_list'] 		                = 'Lista de Ordenes';
@@ -85,5 +85,5 @@ $lang['label_payment_method'] 		    = 'Metodo de Pago';
 $lang['alert_order_not_completed'] 		= 'La orden debe estar en el estado de completado para generar la factura';
 
 
-/* End of file orders_lang.php */
-/* Location: ./admin/language/english/orders_lang.php */
+/* End of file transactions_lang.php */
+/* Location: ./admin/language/english/transactions_lang.php */

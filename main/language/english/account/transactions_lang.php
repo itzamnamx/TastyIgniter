@@ -3,10 +3,10 @@
 $lang['text_heading'] 			        = 'Transacciones Recientes';
 $lang['text_my_account'] 		        = 'Mi Cuenta';
 $lang['text_view_heading'] 		        = 'Ver Mis Transacciones';
-$lang['text_order_menus'] 			= 'Transacción Realizada';
+$lang['text_order_menus'] 			= 'Menus Ordenados';
 $lang['text_empty'] 			        = 'No hay Transacción(es).';
-$lang['text_deposit'] 			        = 'Abono';
-$lang['text_charge']                            = 'Cargo';
+$lang['text_delivery'] 			        = 'Envio';
+$lang['text_collection'] 		        = 'Para llevar';
 $lang['text_reorder'] 			        = 'Ordenar nuevamente';
 $lang['text_leave_review'] 		        = 'Calificar';
 
@@ -29,5 +29,5 @@ $lang['button_back'] 			        = 'Regresar';
 
 $lang['alert_reorder_success'] 			= '<p class="alert-success">You have successfully added the menus from order ID %s to your order.</p>';
 
-/* End of file orders_lang.php */
-/* Location: ./main/language/english/main/orders_lang.php */
+/* End of file transaction_lang.php */
+/* Location: ./main/language/english/main/transaction_lang.php */

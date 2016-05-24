@@ -35,8 +35,7 @@
 							<li><a href="#address" data-toggle="tab"><?php echo lang('text_default_address'); ?></a></li>
 							<li><a href="#cart" data-toggle="tab"><?php echo lang('text_cart'); ?></a></li>
 							<li><a href="#orders" data-toggle="tab"><?php echo lang('text_orders'); ?></a></li>
-                                                        <li><a href="#transactions" data-toggle="tab"><?php echo lang('text_transactions'); ?></a></li>
-							<li><a href="#reservations" data-toggle="tab"><?php echo lang('text_reservations'); ?></a></li>
+                                                        <li><a href="#transactions" data-toggle="tab"><?php echo lang('text_transactions'); ?></a></li>							
 							<li><a href="#inbox" data-toggle="tab"><?php echo sprintf(lang('text_inbox'), $inbox_total); ?></a></li>
 						</ul>
 					</div>
@@ -186,34 +185,7 @@
 								<?php } ?>
 							</div>
 
-							<div id="reservations" class="tab-pane">
-								<?php if (!empty($reservations)) { ?>
-									<div class="table-responsive">
-										<table class="table table-none">
-											<thead>
-												<tr>
-                                                    <th><?php echo lang('column_id'); ?></th>
-                                                    <th><?php echo lang('column_status'); ?></th>
-                                                    <th><?php echo lang('column_date'); ?></th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php foreach ($reservations as $reservation) { ?>
-												<tr>
-													<td><a href="<?php echo $reservation['view']; ?>"><?php echo $reservation['reservation_id']; ?></a></td>
-													<td><?php echo $reservation['status_name']; ?></td>
-													<td><?php echo $reservation['reserve_time']; ?> - <?php echo $reservation['reserve_date']; ?></td>
-												</tr>
-												<?php } ?>
-											</tbody>
-										</table>
-									</div>
-								<?php } else { ?>
-									<div class="panel-body">
-										<p><?php echo lang('text_no_reservations'); ?></p>
-									</div>
-								<?php } ?>
-							</div>
+							
 
 							<div id="inbox" class="tab-pane">
 								<?php if (!empty($messages)) { ?>
