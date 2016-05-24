@@ -56,12 +56,16 @@
 												<td><?php echo $customer_info['last_name']; ?></td>
 											</tr>
                                                                                         <tr>
-												<td><b><?php echo lang('label_last_name'); ?></b></td>
+												<td><b><?php echo lang('label_last_name2'); ?></b></td>
 												<td><?php echo $customer_info['last_name2']; ?></td>
 											</tr>
 											<tr>
 												<td><b><?php echo lang('label_email'); ?></b></td>
 												<td><?php echo $customer_info['email']; ?></td>
+											</tr>
+                                                                                        <tr>
+												<td><b><?php echo lang('label_balance'); ?></b></td>
+												<td><a class="btn btn-default" href="<?php echo $balance_url; ?>"><?php echo lang('text_add_credit'); ?></a></td>
 											</tr>
 											<tr>
 												<td><b><?php echo lang('label_password'); ?></b></td>

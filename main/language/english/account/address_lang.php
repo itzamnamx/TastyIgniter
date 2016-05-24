@@ -1,23 +1,23 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct access allowed');
 
-$lang['text_heading'] 			        = 'Address Book';
+$lang['text_heading'] 			        = 'Libreta de Direcciones';
 $lang['text_my_account'] 		        = 'Mi Cuenta';
-$lang['text_edit_heading'] 		        = 'Address Book Edit';
-$lang['text_no_address'] 		        = 'You don\'t have any stored address(s)';
-$lang['text_edit'] 				        = 'EDIT';
+$lang['text_edit_heading'] 		        = 'Editar Direcciones';
+$lang['text_no_address'] 		        = 'No hay direcciones registradas';
+$lang['text_edit'] 				        = 'EDITAR';
 
-$lang['button_back'] 			        = 'Back';
-$lang['button_add'] 			        = 'Add New Address';
-$lang['button_update'] 			        = 'Update Address';
+$lang['button_back'] 			        = 'Regresar';
+$lang['button_add'] 			        = 'Agregar Dirección';
+$lang['button_update'] 			        = 'Actualizar Dirección';
 
-$lang['label_address_1'] 		        = 'Address 1';
-$lang['label_address_2'] 		        = 'Address 2';
-$lang['label_city'] 			        = 'City';
-$lang['label_state'] 			        = 'State';
-$lang['label_postcode'] 		        = 'Postcode';
-$lang['label_country'] 			        = 'Country';
+$lang['label_address_1'] 		        = 'Dirección 1';
+$lang['label_address_2'] 		        = 'Dirección 2';
+$lang['label_city'] 			        = 'Ciudad';
+$lang['label_state'] 			        = 'Estado';
+$lang['label_postcode'] 		        = 'Código Postal';
+$lang['label_country'] 			        = 'Pais';
 
-$lang['alert_updated_success'] 			= '<p class="alert-success">Address added/updated successfully.</p>';
+$lang['alert_updated_success'] 			= '<p class="alert-success">La dirección se agregó/actualizó exitosamente.</p>';
 
 /* End of file address_lang.php */
 /* Location: ./main/language/english/main/address_lang.php */

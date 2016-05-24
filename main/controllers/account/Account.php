@@ -37,6 +37,7 @@ class Account extends Main_Controller {
 
 		$data['checkout_url'] 		    = site_url('checkout');
 		$data['password_url'] 			= site_url('account/details');
+                $data['balance_url'] 			= site_url('account/balance');
 		$data['cart_items'] 			= $this->cart->total_items();
 		$data['cart_total'] 			= $this->currency->format($this->cart->order_total());
 
