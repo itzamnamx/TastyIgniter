@@ -53,7 +53,7 @@ class Transactions_model extends TI_Model {
 				$this->db->where('customer_id', $filter['customer_id']);
 			}
 
-			$this->db->where('transactinos.status_id !=', '0');
+			$this->db->where('transactions.status_id !=', '0');
 		}
 
 		$this->db->from('transactions');

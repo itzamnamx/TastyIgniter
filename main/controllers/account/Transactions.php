@@ -53,7 +53,7 @@ class Transactions extends Main_Controller {
 		$time_format = ($this->config->item('time_format')) ? $this->config->item('time_format') : '%h:%i %a';
 
 		$data['transactions'] = array();
-		$results = $this->Transctions_model->getList($filter);			// retrieve customer transactions based on customer id from getMainTransactions method in Transactions model
+		$results = $this->Transactions_model->getList($filter);			// retrieve customer transactions based on customer id from getMainTransactions method in Transactions model
 		foreach ($results as $result) {
 
 			// if transaction type is equal to 1, transaction type is delivery else collection
