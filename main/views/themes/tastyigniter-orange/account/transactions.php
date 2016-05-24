@@ -39,12 +39,9 @@
 										<th><?php echo lang('column_location'); ?></th>
 										<th><?php echo lang('column_date'); ?></th>
 										<th><?php echo lang('column_transaction'); ?></th>
-										<th><?php echo lang('column_items'); ?></th>
+										
 										<th><?php echo lang('column_total'); ?></th>
-										<th></th>
-										<?php if (config_item('allow_reviews') !== '1') { ?>
-											<th></th>
-										<?php } ?>
+										
 									</tr>
 								</thead>
 								<tbody>
@@ -56,12 +53,9 @@
                                             <td><?php echo $transaction['location_name']; ?></td>
                                             <td><?php echo $transaction['transaction_time']; ?> - <?php echo $transaction['date_added']; ?></td>
                                             <td><?php echo $transaction['transaction_type']; ?></td>
-                                            <td><?php echo $transaction['total_items']; ?></td>
+                                            
                                             <td><?php echo $transaction['transaction_total']; ?></td>
-                                            <td><a class="re-order" title="<?php echo lang('text_reorder'); ?>" href="<?php echo $transaction['reorder']; ?>"><i class="fa fa-mail-reply text-primary"></i></a></td>
-											<?php if (config_item('allow_reviews') !== '1') { ?>
-												<td><a class="leave-review" title="<?php echo lang('text_leave_review'); ?>" href="<?php echo $transaction['leave_review']; ?>"><i class="fa fa-heart text-warning"></i></a></td>
-											<?php } ?>
+                                            
                                         </tr>
 									<?php } ?>
 								<?php } else { ?>
@@ -76,8 +70,7 @@
 
 					<div class="col-md-12">
 						<div class="buttons col-xs-6 wrap-none">
-							<a class="btn btn-default" href="<?php echo $back_url; ?>"><?php echo lang('button_back'); ?></a>
-							<a class="btn btn-primary" href="<?php echo $new_transaction_url; ?>"><?php echo lang('button_transaction'); ?></a>
+							<a class="btn btn-default" href="<?php echo $back_url; ?>"><?php echo lang('button_back'); ?></a>							
 						</div>
 
 						<div class="col-xs-6">

@@ -158,7 +158,7 @@
 							</div>
                                                     
                                                         <div id="transactions" class="tab-pane">
-								<?php if (!empty($orders)) { ?>
+								<?php if (!empty($transactions)) { ?>
 									<div class="table-responsive">
 										<table class="table table-none">
 											<thead>
@@ -171,7 +171,7 @@
 											<tbody>
 												<?php foreach ($transactions as $transaction) { ?>
 												<tr>
-													<td><a href="<?php echo $transaction['view']; ?>"><?php echo $transaction['order_id']; ?></a></td>
+													<td><a href="<?php echo $transaction['view']; ?>"><?php echo $transaction['transaction_id']; ?></a></td>
 													<td width="80%" class="text-center"><?php echo $transaction['status_name']; ?></td>
 													<td><?php echo $transaction['order_time']; ?> - <?php echo $transaction['date_added']; ?></td>
 												</tr>

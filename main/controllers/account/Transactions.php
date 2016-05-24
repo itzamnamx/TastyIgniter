@@ -39,10 +39,10 @@ class Transactions extends Main_Controller {
         $this->template->setBreadcrumb($this->lang->line('text_my_account'), 'account/account');
         $this->template->setBreadcrumb($this->lang->line('text_heading'), 'account/transactions');
 
-		$this->template->setTitle($this->lang->line('text_heading'));
-		$this->template->setHeading($this->lang->line('text_heading'));
+	$this->template->setTitle($this->lang->line('text_heading'));
+	$this->template->setHeading($this->lang->line('text_heading'));
 
-		$data['back_url'] 				= site_url('account/account');
+	$data['back_url'] 				= site_url('account/account');
 
         $this->load->library('location');
         if ($this->location->local()) {
