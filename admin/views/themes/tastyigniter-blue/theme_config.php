@@ -38,6 +38,7 @@ $theme['nav_menu'] = array(
 		'permission' => 'Admin.Orders|Admin.Reservations|Admin.Coupons',
 		'child' => array(
 			'orders' => array('class' => 'orders', 'href' => site_url('orders'), 'title' => lang('menu_order'), 'permission' => 'Admin.Orders'),
+                        'transactions' => array('class' => 'orders', 'href' => site_url('transactions'), 'title' => lang('menu_transaction'), 'permission' => 'Admin.Transactions'),
 			'reservations' => array('class' => 'reservations', 'href' => site_url('reservations'), 'title' => lang('menu_reservation'), 'permission' => 'Admin.Reservations'),
 			'coupons' => array('class' => 'coupons', 'href' => site_url('coupons'), 'title' => lang('menu_coupon'), 'permission' => 'Admin.Coupons'),
 		)

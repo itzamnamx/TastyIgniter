@@ -5,6 +5,8 @@
 			<ul id="nav-tabs" class="nav nav-tabs">
 				<li class="active"><a href="#general" data-toggle="tab"><?php echo lang('text_tab_general'); ?></a></li>
 				<li><a href="#addresses" data-toggle="tab"><?php echo lang('text_tab_address'); ?></a></li>
+                                <li><a href="#balance" data-toggle="tab"><?php echo lang('text_tab_balance'); ?></a></li>
+                                <li><a href="#transactions" data-toggle="tab"><?php echo lang('text_tab_transactions'); ?></a></li>
 			</ul>
 		</div>
 
