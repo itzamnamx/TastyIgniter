@@ -29,6 +29,7 @@ $lang['column_id'] 		                = 'ID';
 $lang['label_first_name'] 		        = 'Nombre(s)';
 $lang['label_last_name'] 		        = 'Apellido Paterno';
 $lang['label_last_name2'] 		        = 'Apellido Materno';
+$lang['label_balance'] 		        = 'Saldo';
 $lang['label_card_id']                       = 'Número de Credencial';
 $lang['label_email'] 		            = 'Email';
 $lang['label_password'] 		        = 'Clave';

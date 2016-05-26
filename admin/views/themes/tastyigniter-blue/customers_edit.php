@@ -213,6 +213,147 @@
 					<?php } ?>
 					</div>
 				</div>
+                                
+                                <div id="balance" class="tab-pane row wrap-all active">
+					<div class="form-group">
+						<label for="input-first-name" class="col-sm-3 control-label"><?php echo lang('label_balance'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="balance" id="input-first-name" class="form-control" value="<?php echo set_value('balance', $balance); ?>" />
+							<?php echo form_error('balance', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>					
+				</div>
+                            
+                                <div id="transactions" class="tab-pane row wrap-all active">
+					<div class="form-group">
+						<label for="input-first-name" class="col-sm-3 control-label"><?php echo lang('label_first_name'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="first_name" id="input-first-name" class="form-control" value="<?php echo set_value('first_name', $first_name); ?>" />
+							<?php echo form_error('first_name', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-last-name" class="col-sm-3 control-label"><?php echo lang('label_last_name'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="last_name" id="input-last-name" class="form-control" value="<?php echo set_value('last_name', $last_name); ?>" />
+							<?php echo form_error('last_name', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+                                        <div class="form-group">
+						<label for="input-last-name2" class="col-sm-3 control-label"><?php echo lang('label_last_name2'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="last_name2" id="input-last-name2" class="form-control" value="<?php echo set_value('last_name2', $last_name2); ?>" />
+							<?php echo form_error('last_name2', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+                                        <div class="form-group">
+						<label for="input-card-id" class="col-sm-3 control-label"><?php echo lang('label_card_id'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="card_id" id="input-card-id" class="form-control" value="<?php echo set_value('card_id', $card_id); ?>" />
+							<?php echo form_error('card_id', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-email" class="col-sm-3 control-label"><?php echo lang('label_email'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="email" id="input-email" class="form-control" value="<?php echo set_value('email', $email); ?>" />
+							<?php echo form_error('email', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-telephone" class="col-sm-3 control-label"><?php echo lang('label_telephone'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="telephone" id="input-telephone" class="form-control" value="<?php echo set_value('telephone', $telephone); ?>" />
+							<?php echo form_error('telephone', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-password" class="col-sm-3 control-label"><?php echo lang('label_password'); ?>
+							<span class="help-block"><?php echo lang('help_password'); ?></span>
+						</label>
+						<div class="col-sm-5">
+							<input type="password" name="password" id="input-password" class="form-control" value="<?php echo set_value('password'); ?>" autocomplete="off" />
+							<?php echo form_error('password', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-confirm-password" class="col-sm-3 control-label"><?php echo lang('label_confirm_password'); ?></label>
+						<div class="col-sm-5">
+							<input type="password" name="confirm_password" id="input-confirm-password" class="form-control" value="" />
+							<?php echo form_error('confirm_password', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-security-question" class="col-sm-3 control-label"><?php echo lang('label_security_question'); ?></label>
+						<div class="col-sm-5">
+							<select name="security_question_id" id="input-security-question" class="form-control">
+								<option value="">— Select —</option>
+								<?php foreach ($questions as $question) { ?>
+									<?php if ($question['id'] === $security_question) { ?>
+										<option value="<?php echo $question['id']; ?>" selected="selected"><?php echo $question['text']; ?></option>
+									<?php } else { ?>
+										<option value="<?php echo $question['id']; ?>"><?php echo $question['text']; ?></option>
+									<?php } ?>
+								<?php } ?>
+							</select>
+							<?php echo form_error('security_question_id', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-security-answer" class="col-sm-3 control-label"><?php echo lang('label_security_answer'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="security_answer" id="input-security-answer" class="form-control" value="<?php echo set_value('security_answer', $security_answer); ?>" />
+							<?php echo form_error('security_answer', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-customer-group-id" class="col-sm-3 control-label"><?php echo lang('label_customer_group'); ?></label>
+						<div class="col-sm-5">
+							<select name="customer_group_id" id="input-customer-group-id" class="form-control">
+							<?php foreach ($customer_groups as $customer_group) { ?>
+								<?php if ($customer_group['customer_group_id'] === $customer_group_id) { ?>
+									<option value="<?php echo $customer_group['customer_group_id']; ?>" <?php echo set_select('customer_group_id', $customer_group['customer_group_id'], TRUE); ?> ><?php echo $customer_group['group_name']; ?></option>
+								<?php } else { ?>
+									<option value="<?php echo $customer_group['customer_group_id']; ?>" <?php echo set_select('customer_group_id', $customer_group['customer_group_id']); ?> ><?php echo $customer_group['group_name']; ?></option>
+								<?php } ?>
+							<?php } ?>
+							</select>
+							<?php echo form_error('customer_group_id', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-newsletter" class="col-sm-3 control-label"><?php echo lang('label_newsletter'); ?></label>
+						<div class="col-sm-5">
+							<div id="input-newsletter" class="btn-group btn-group-switch" data-toggle="buttons">
+								<?php if ($newsletter == '1') { ?>
+									<label class="btn btn-danger"><input type="radio" name="newsletter" value="0" <?php echo set_radio('newsletter', '0'); ?>><?php echo lang('text_un_subscribe'); ?></label>
+									<label class="btn btn-success active"><input type="radio" name="newsletter" value="1" <?php echo set_radio('newsletter', '1', TRUE); ?>><?php echo lang('text_subscribe'); ?></label>
+								<?php } else { ?>
+									<label class="btn btn-danger active"><input type="radio" name="newsletter" value="0" <?php echo set_radio('newsletter', '0', TRUE); ?>><?php echo lang('text_un_subscribe'); ?></label>
+									<label class="btn btn-success"><input type="radio" name="newsletter" value="1" <?php echo set_radio('newsletter', '1'); ?>><?php echo lang('text_subscribe'); ?></label>
+								<?php } ?>
+							</div>
+							<?php echo form_error('newsletter', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="input-status" class="col-sm-3 control-label"><?php echo lang('label_status'); ?></label>
+						<div class="col-sm-5">
+							<div class="btn-group btn-group-switch" data-toggle="buttons">
+								<?php if ($status == '1') { ?>
+									<label class="btn btn-danger"><input type="radio" name="status" value="0" <?php echo set_radio('status', '0'); ?>><?php echo lang('text_disabled'); ?></label>
+									<label class="btn btn-success active"><input type="radio" name="status" value="1" <?php echo set_radio('status', '1', TRUE); ?>><?php echo lang('text_enabled'); ?></label>
+								<?php } else { ?>
+									<label class="btn btn-danger active"><input type="radio" name="status" value="0" <?php echo set_radio('status', '0', TRUE); ?>><?php echo lang('text_disabled'); ?></label>
+									<label class="btn btn-success"><input type="radio" name="status" value="1" <?php echo set_radio('status', '1'); ?>><?php echo lang('text_enabled'); ?></label>
+								<?php } ?>
+							</div>
+							<?php echo form_error('status', '<span class="text-danger">', '</span>'); ?>
+						</div>
+					</div>
+				</div>
+                            
+                            
 			</div>
 		</form>
 	</div>

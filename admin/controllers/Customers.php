@@ -12,6 +12,8 @@ class Customers extends Admin_Controller {
         $this->load->model('Countries_model');
         $this->load->model('Security_questions_model');
         $this->load->model('Orders_model');
+        $this->load->model('Balance_model');
+        $this->load->model('Transactions_model');
         $this->load->model('Reservations_model');
 
         $this->load->library('pagination');
@@ -67,8 +69,8 @@ class Customers extends Admin_Controller {
 			$data['order_by_active'] = 'DESC';
 		}
 
-        $this->template->setTitle($this->lang->line('text_title'));
-        $this->template->setHeading($this->lang->line('text_heading'));
+                $this->template->setTitle($this->lang->line('text_title'));
+                $this->template->setHeading($this->lang->line('text_heading'));
 		$this->template->setButton($this->lang->line('button_new'), array('class' => 'btn btn-primary', 'href' => page_url() .'/edit'));
 		$this->template->setButton($this->lang->line('button_delete'), array('class' => 'btn btn-danger', 'onclick' => 'confirmDelete();'));;
 
@@ -109,14 +111,15 @@ class Customers extends Admin_Controller {
 				'text'	=> $result['text']
 			);
 		}
+                
+                
 
 		$data['country_id'] = $this->config->item('country_id');
-		$data['countries'] = array();
-		$results = $this->Countries_model->getCountries(); 										// retrieve countries array from getCountries method in locations model
-		foreach ($results as $result) {															// loop through crountries array
-			$data['countries'][] = array( 														// create array of countries data to pass to view
-				'country_id'	=>	$result['country_id'],
-				'name'			=>	$result['country_name'],
+		$data['countries'] = array();		
+                $results = $this->Countries_model->getCountries(); 		// retrieve countries array from getCountries method in locations model
+		foreach ($results as $result) {					// loop through crountries array
+			$data['countries'][] = array( 				// create array of countries data to pass to view
+				'country_id'	=>	$result['country_id'],	'name'	=>	$result['country_name'],
 			);
 		}
 
@@ -149,6 +152,7 @@ class Customers extends Admin_Controller {
 
 	public function edit() {
 		$customer_info = $this->Customers_model->getCustomer((int)$this->input->get('id'));
+                $balance_info = $this->Balance_model->getBalance((int)$this->input->get('id'));
 
 		if ($customer_info) {
 		    $customer_id = $customer_info['customer_id'];
@@ -159,8 +163,8 @@ class Customers extends Admin_Controller {
 		}
 
 		$title = (isset($customer_info['first_name']) AND isset($customer_info['last_name'])) ? $customer_info['first_name'] .' '. $customer_info['last_name'] : $this->lang->line('text_new');
-        $this->template->setTitle(sprintf($this->lang->line('text_edit_heading'), $title));
-        $this->template->setHeading(sprintf($this->lang->line('text_edit_heading'), $title));
+                $this->template->setTitle(sprintf($this->lang->line('text_edit_heading'), $title));
+                $this->template->setHeading(sprintf($this->lang->line('text_edit_heading'), $title));
 		$this->template->setButton($this->lang->line('button_save'), array('class' => 'btn btn-primary', 'onclick' => '$(\'#edit-form\').submit();'));
 		$this->template->setButton($this->lang->line('button_save_close'), array('class' => 'btn btn-default', 'onclick' => 'saveClose();'));
 		$this->template->setButton($this->lang->line('button_icon_back'), array('class' => 'btn btn-default', 'href' => site_url('customers')));
@@ -173,7 +177,7 @@ class Customers extends Admin_Controller {
 			redirect('customers/edit?id='. $customer_id);
 		}
 
-        $data['first_name'] 		= $customer_info['first_name'];
+                $data['first_name'] 		= $customer_info['first_name'];
 		$data['last_name'] 			= $customer_info['last_name'];
                 $data['last_name2'] 			= $customer_info['last_name2'];
                 $data['card_id'] 			= $customer_info['card_id'];
@@ -184,11 +188,13 @@ class Customers extends Admin_Controller {
 		$data['newsletter'] 		= $customer_info['newsletter'];
 		$data['customer_group_id'] 	= (!empty($customer_info['customer_group_id'])) ? $customer_info['customer_group_id'] : $this->config->item('customer_group_id');
 		$data['status'] 			= $customer_info['status'];
+                
+                $data['balance'] 		= $balance_info['amount'];
 
 		if ($this->input->post('address')) {
-			$data['addresses'] 			= $this->input->post('address');
+			$data['addresses'] = $this->input->post('address');
 		} else {
-			$data['addresses'] 			= $this->Addresses_model->getAddresses($customer_id);
+			$data['addresses'] = $this->Addresses_model->getAddresses($customer_id);
 		}
 
 		$data['questions'] = array();
