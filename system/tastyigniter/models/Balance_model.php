@@ -26,8 +26,7 @@ class Balance_model extends TI_Model {
 
 	public function getBalance($customer_id) {
 		if  ($customer_id !== '0') {
-			$this->db->from('balance');
-			$this->db->where('balance_id', $balance_id);
+			$this->db->from('balance');			
 			$this->db->where('customer_id', $customer_id);
 
 			$query = $this->db->get();
@@ -41,8 +40,7 @@ class Balance_model extends TI_Model {
 
 	public function getDefault($customer_id) {
 		if  ($customer_id !== '0') {
-			$this->db->from('balance');
-			$this->db->where('balance_id', $balance_id);
+			$this->db->from('balance');			
 			$this->db->where('customer_id', $customer_id);
 
 			$query = $this->db->get();

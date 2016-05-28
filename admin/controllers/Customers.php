@@ -152,7 +152,8 @@ class Customers extends Admin_Controller {
 
 	public function edit() {
 		$customer_info = $this->Customers_model->getCustomer((int)$this->input->get('id'));
-                $balance_info = $this->Balance_model->getBalance((int)$this->input->get('id'));
+                
+                
 
 		if ($customer_info) {
 		    $customer_id = $customer_info['customer_id'];
@@ -189,7 +190,7 @@ class Customers extends Admin_Controller {
 		$data['customer_group_id'] 	= (!empty($customer_info['customer_group_id'])) ? $customer_info['customer_group_id'] : $this->config->item('customer_group_id');
 		$data['status'] 			= $customer_info['status'];
                 
-                $data['balance'] 		= $balance_info['amount'];
+                
 
 		if ($this->input->post('address')) {
 			$data['addresses'] = $this->input->post('address');
@@ -215,6 +216,12 @@ class Customers extends Admin_Controller {
 				'group_name'		=>	$result['group_name']
 			);
 		}
+                
+                $this->load->model('Balance_model');
+		
+		$results = $this->Balance_model->getBalance($customer_id);
+		$data['balance'] = 	$results['amount'];
+                
 
 		$data['country_id'] = $this->config->item('country_id');
 		$data['countries'] = array();

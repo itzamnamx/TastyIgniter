@@ -1,11 +1,11 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['text_title'] 		            = 'Database Maintenance';
-$lang['text_heading'] 		            = 'Database Maintenance';
-$lang['text_backup_heading'] 		    = 'Database Backup';
+$lang['text_title'] 		            = 'Mantenimiento de Base de Datos';
+$lang['text_heading'] 		            = 'Mantenimiento de Base de Datos';
+$lang['text_backup_heading'] 		    = 'Respaldo de la Base de Datos';
 $lang['text_browse_heading'] 		    = 'Database Browse: %s';
 $lang['text_list'] 		                = 'Database Maintenance List';
-$lang['text_tab_backup'] 		        = 'Backup';
+$lang['text_tab_backup'] 		        = 'Respaldo';
 $lang['text_tab_existing_backup'] 		= 'Existing Backups';
 $lang['text_tab_migrations'] 		    = 'Migrations';
 $lang['text_tab_create_backup'] 		= 'Create A New Backup';
@@ -20,8 +20,8 @@ $lang['text_gzip'] 		                = 'gzip';
 $lang['text_drop_tables'] 		        = 'Add DROP TABLE statement:';
 $lang['text_add_inserts'] 		        = 'Add INSERT statement for data dump:';
 
-$lang['button_backup'] 		            = 'Backup';
-$lang['button_migrate'] 		        = 'Migrate';
+$lang['button_backup'] 		            = 'Respaldar';
+$lang['button_migrate'] 		        = 'Migrar';
 $lang['button_modules'] 		        = 'Modules';
 
 $lang['column_select_tables'] 		    = 'Select tables to backup';

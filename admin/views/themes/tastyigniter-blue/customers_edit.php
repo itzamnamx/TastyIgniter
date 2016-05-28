@@ -216,9 +216,9 @@
                                 
                                 <div id="balance" class="tab-pane row wrap-all active">
 					<div class="form-group">
-						<label for="input-first-name" class="col-sm-3 control-label"><?php echo lang('label_balance'); ?></label>
+						<label for="input-balance" class="col-sm-3 control-label"><?php echo lang('label_balance'); ?></label>
 						<div class="col-sm-5">
-							<input type="text" name="balance" id="input-first-name" class="form-control" value="<?php echo set_value('balance', $balance); ?>" />
+							<input type="text" name="balance" id="input-balance" class="form-control" value="<?php echo set_value('balance', $balance); ?>" />
 							<?php echo form_error('balance', '<span class="text-danger">', '</span>'); ?>
 						</div>
 					</div>					
