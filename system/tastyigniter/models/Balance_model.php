@@ -50,11 +50,11 @@ class Balance_model extends TI_Model {
 		}
 	}
 
-	public function updateDefault($customer_id = '', $balance_id = '') {
+	public function updateDefault($customer_id = '', $amount = '') {
 		$query = FALSE;
 
-		if ($balance_id !== '' AND $customer_id !== '') {
-			$this->db->set('balance_id', $balance_id);
+		if ($amount !== '' AND $customer_id !== '') {
+			$this->db->set('amount', $amount);
 			$this->db->where('customer_id', $customer_id);
 
 			$query = $this->db->update('balance');
@@ -75,8 +75,8 @@ class Balance_model extends TI_Model {
 		}
 
 		
-		if (is_numeric($balance_id)) {
-			$this->db->where('balance_id', $balance_id);
+		if (is_numeric($customer_id)) {
+			$this->db->where('customer_id', $customer_id);
 			$query = $this->db->update('balance');
 		} else {
 			$query = $this->db->insert('balance');
@@ -86,10 +86,9 @@ class Balance_model extends TI_Model {
 		return ($query === TRUE AND is_numeric($balance_id)) ? $balance_id : FALSE;
 	}
 
-	public function deleteBalance($customer_id, $balance_id) {
+	public function deleteBalance($customer_id) {
 
-		$this->db->where('customer_id', $customer_id);
-		$this->db->where('balance_id', $balance_id);
+		$this->db->where('customer_id', $customer_id);		
 		$this->db->delete('balance');
 
 		if ($this->db->affected_rows() > 0) {
