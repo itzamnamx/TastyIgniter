@@ -133,11 +133,27 @@ class Categories_model extends TI_Model {
 		} else {
 			$this->db->set('status', '0');
 		}
+                
+                if (isset($save['thumb'])) {
+			$this->db->set('thumb', $save['thumb']);
+		}
+                
+                if (isset($save['url'])) {
+			$this->db->set('url', $save['url']);
+		}
+                
+                if (isset($save['featured']) AND $save['featured'] === '1') {
+			$this->db->set('featured', $save['featured']);
+		} else {
+			$this->db->set('featured', '0');
+		}
+                
 
 		if (is_numeric($category_id)) {
 			$this->db->where('category_id', $category_id);
 			$query = $this->db->update('categories');
 		} else {
+                        $this->db->set('guid', GUID());
 			$query = $this->db->insert('categories');
 			$category_id = $this->db->insert_id();
 		}
