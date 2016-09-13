@@ -46,6 +46,7 @@ defined('FOPEN_READ_WRITE_CREATE_STRICT')       OR define('FOPEN_READ_WRITE_CREA
 |
 */
 defined('ADMINDIR') OR define('ADMINDIR', 'admin');
+defined('RESTDIR') OR define('RESTDIR', 'api');
 defined('MAINDIR')  OR define('MAINDIR', 'main');
 
 /*

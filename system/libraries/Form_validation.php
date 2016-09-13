@@ -140,9 +140,10 @@ class CI_Form_validation {
 			unset($rules['error_suffix']);
 		}
 
+                log_message('info', 'Validation rules can be stored in a config file.');
 		// Validation rules can be stored in a config file.
 		$this->_config_rules = $rules;
-
+                log_message('info', 'Automatically load the form helper ');
 		// Automatically load the form helper
 		$this->CI->load->helper('form');
 

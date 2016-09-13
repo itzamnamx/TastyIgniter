@@ -20,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  */
 	define('TI_VERSION', '2.0.0');
+        define('CI_VERSION', '3.0.1');
 
 	// Path to the root folder
 	defined('ROOTPATH') OR define('ROOTPATH', str_replace(SYSDIR.'/', '', BASEPATH));

@@ -13,17 +13,8 @@ $conn = new mysqli("localhost", "root", "ZlHF6A7KEGWN", "lozcar");
 	}
 
 	//$query="SELECT p_id,p_name,p_description,p_image_id,p_price FROM products where p_id<=".$till." and p_available=1 ";
-        $query="SELECT menu_id AS p_id,menu_name AS p_name,menu_description AS p_description,menu_photo AS p_image_id,menu_price AS p_price FROM sqfnjcd9v_menus where menu_status=1  ";
+        $query="SELECT category_id AS id, guid AS guid, name AS title, description AS description, url AS url, featured AS featured, icon AS icon FROM sqfnjcd9v_categories WHERE status=1 ";
 
-
-	if(isset($_GET["category"]) && !empty($_GET["category"]) ){
-		
-		$cat = $_GET["category"];
-		$cat = stripslashes($cat);
-		$cat = $conn->real_escape_string($cat);
-		$query=$query."and menu_category_id like ".$cat." ";
-		
-	}
 	
 	if( isset($_GET["sort"]) && !empty($_GET["sort"]) ){
 		
@@ -40,24 +31,27 @@ $result = $conn->query($query);
 $outp = "";
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     if ($outp != "") {$outp .= ",";}
-    $outp .= '{"p_id":"'  . $rs["p_id"] . '",';
-    $outp .= '"p_name":"'   . $rs["p_name"]        . '",';
-	$outp .= '"p_description":"'   . $rs["p_description"]        . '",';
-	$outp .= '"p_image_id":"'   . $rs["p_image_id"]        . '",';
-	$outp .= '"p_price":"'. $rs["p_price"]     . '"}';
+    $outp .= '{"id":"'  . $rs["id"] . '",';
+    $outp .= '"guid":"'   . $rs["guid"]        . '",';
+	$outp .= '"title":"'   . $rs["title"]        . '",';
+	$outp .= '"description":"'   . $rs["description"]        . '",';
+        $outp .= '"featured":"'   . $rs["featured"]        . '",';
+        $outp .= '"icon":"'   . $rs["icon"]        . '",';        
+	$outp .= '"url":"'. $rs["url"]     . '"}';
+        
 }
 
 
 // Adding has more
-$result=$conn->query("SELECT count(*) as total from sqfnjcd9v_menus");
+$result=$conn->query("SELECT count(*) as total from sqfnjcd9v_categories");
 $data=$result->fetch_array(MYSQLI_ASSOC);
 $total = $data['total'];
 
-if(($total-$till)>0){$has_more=$total-$till;}
-			    else{$has_more=0;}
-			
+        //TODO FAKE ID
+
+        $id=1;			
 				
-	$outp ='{"has_more":'.$has_more.',"records":['.$outp.']}';
+	$outp ='{"id":'.$id.',"total":'.$total.',"result":['.$outp.']}';
 
 	
 $conn->close();

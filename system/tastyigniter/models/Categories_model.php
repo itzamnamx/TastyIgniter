@@ -21,7 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * @link           http://docs.tastyigniter.com
  */
 class Categories_model extends TI_Model {
-
+        
 	public function getCount($filter = array()) {
 		if ( ! empty($filter['filter_search'])) {
 			$this->db->like('name', $filter['filter_search']);
