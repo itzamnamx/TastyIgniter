@@ -6,7 +6,7 @@ class Categories extends REST_Controller {
 
 	public function __construct()
 	{
-                log_message('info','En el constructor ');
+                //log_message('info','En el constructor ');
 		parent::__construct();                
 		//cargamos el modelo cuando se llama al constructor
 		$this->load->model('Categories_model'); // load the menus model
