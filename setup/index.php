@@ -23,7 +23,7 @@
  *
  * NO TRAILING SLASH!
  */
-	$application_folder = '../rest';
+	$application_folder = '../setup';
 
 /*
  *---------------------------------------------------------------

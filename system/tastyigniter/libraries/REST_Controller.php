@@ -14,6 +14,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link            https://github.com/chriskacerguis/codeigniter-restserver
  * @version         3.0.0
  */
+
+//http://stackoverflow.com/questions/11430118/codeigniter-hmvc-rest
+//You need to change Rest_Controller to extend HMVC's MX_Controller rather than CI_Controller.
+
 abstract class REST_Controller extends MX_Controller {
 
     

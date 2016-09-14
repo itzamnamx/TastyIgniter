@@ -27,8 +27,8 @@ else if (APPDIR === 'setup') {
     $route['reservation/success'] = 'reservation/success';    
     
     //Begin Rest services based on https://github.com/chriskacerguis/codeigniter-restserver
-    $route['api/1.0/(:any)'] = 'api/$1';
-    $route["api/1.0/categories"]["get"] = "api/categories/index";
+    //$route['api/1.0/(:any)'] = 'api/$1';
+    //$route["api/1.0/categories"]["get"] = "api/categories/index";
     //End Rest services
     
     $route["^(" . implode('|', $controller_exceptions) . ")?$"] = '$1';
