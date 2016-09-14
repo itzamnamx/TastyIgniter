@@ -608,8 +608,8 @@ abstract class REST_Controller extends MX_Controller {
 
         // Check to see if this is CI 3.x
         $CI_VERSION = 3;
-        log_message('info','Check to see if this is CI 3.x ');
-        log_message('info','Using CI VERSION::: v'.CI_VERSION);
+        
+        
         
         if (explode('.', CI_VERSION, 2)[0] < 3)
         {
