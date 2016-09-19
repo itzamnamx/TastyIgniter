@@ -103,6 +103,45 @@ class Locations_model extends TI_Model {
 			}
 		}
 	}
+        
+        public function findLocation($location_id) {
+		$location_data = array();
+
+		if ($location_id !== 0) {
+			$this->db->from('locations');
+			$this->db->join('countries', 'countries.country_id = locations.location_country_id', 'left');
+			//$this->db->join('working_hours', 'working_hours.location_id = locations.location_id', 'left');
+
+			$this->db->where('location_id', $location_id);
+			$query = $this->db->get();
+
+			if ($query->num_rows() > 0) {
+				$row = $query->row_array();
+
+				$location_data = array(
+					'id'   => $row['location_id'],
+					'storeName' => $row['location_name'],
+					'address'     => $row['location_address_1'].', '.$row['location_address_2'].', '.$row['location_state'].', '.$row['location_postcode'].', '.$row['country_name'],
+                                        'desc' => $row['description'],                                        				
+					'phoneNumber'    => $row['location_telephone'],
+                                        'email'          => $row['location_email'],
+                                        'officeLocation' => $row['location_lat'].'-'.$row['location_lng'],
+                                    
+					'state'         => $row['location_state'],
+					'postcode'      => $row['location_postcode'],
+					'country_id'    => $row['location_country_id'],
+					'country'       => $row['country_name'],
+					'iso_code_2'    => $row['iso_code_2'],
+					'iso_code_3'    => $row['iso_code_3'],
+					'location_lat'  => $row['location_lat'],
+					'location_lng'  => $row['location_lng'],
+					'format'        => $row['format'],
+				);
+			}
+		}
+
+		return $location_data;
+	}
 
 	public function getAddress($location_id) {
 		$address_data = array();

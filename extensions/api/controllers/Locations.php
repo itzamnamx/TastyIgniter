@@ -2,28 +2,28 @@
 
 require_once BASEPATH."tastyigniter/libraries/REST_Controller.php";
 
-class Categories extends REST_Controller {
+class Locations extends REST_Controller {
 
 	public function __construct()
 	{
                 //log_message('info','En el constructor ');
 		parent::__construct();                
 		//cargamos el modelo cuando se llama al constructor
-		$this->load->model('Categories_model'); // load the menus model
+		$this->load->model('Locations_model'); // load the menus model
 	}
 	
 	//esta función sirve para obtener info (pedir datos al servidor) 
 	public function index_get()
 	{
                 
-		$categories = $this->Categories_model->getCategories();
-		if (! is_null($categories)) 
+		$locations = $this->Locations_model->getLocations();
+		if (! is_null($locations)) 
 		{                    
-			$this->response(array("response"=>$categories), 200);
+			$this->response(array("response"=>$locations), 200);
 		}
 		else
 		{
-			$this->response(array("error"=>"No hay Categorias"), 404);
+			$this->response(array("error"=>"No hay Ubicaciones"), 404);
 		}
 	}
 
@@ -36,15 +36,15 @@ class Categories extends REST_Controller {
 			$this->response(NULL, 400);
 		}
 
-		$category = $this->Categories_model->getCategory($id);
+		$location = $this->Locations_model->getLocation($id);
 
-		if (! is_null($category)) 
+		if (! is_null($location)) 
 		{                    
-			$this->response(array("response" => $category), 200);
+			$this->response(array("response" => $location), 200);
 		}
 		else
 		{
-			$this->response(array("error" => "No se encuentra la categoria"), 404);
+			$this->response(array("error" => "No se encuentra la ubicacion"), 404);
 		}
 	}
 

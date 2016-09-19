@@ -20,12 +20,12 @@ $lang['column_display_type'] 		    = 'Tipo de Pantalla';
 $lang['column_priority'] 		        = 'Prioridad';
 $lang['column_id'] 		                = 'ID';
 
-$lang['label_option_name'] 		        = 'Nombre de Opcion';
-$lang['label_priority'] 		        = 'Priorrdad';
+$lang['label_option_name'] 		        = 'Nombre de Opción';
+$lang['label_priority'] 		        = 'Prioridad';
 $lang['label_display_type'] 		    = 'Tipo de Pantalla';
 $lang['label_option_value'] 		    = 'Valor de Opcion';
-$lang['label_option_price'] 		    = 'Precio de la Opcion';
-$lang['label_option_id'] 		        = 'ID de la Opcion';
+$lang['label_option_price'] 		    = 'Precio de la Opción';
+$lang['label_option_id'] 		        = 'ID de la Opción';
 
 
 /* End of file menu_options_lang.php */
