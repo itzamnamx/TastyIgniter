@@ -119,29 +119,94 @@ class Locations_model extends TI_Model {
 				$row = $query->row_array();
 
 				$location_data = array(
-					'id'   => $row['location_id'],
+					//'id'   => $row['location_id'],
 					'storeName' => $row['location_name'],
 					'address'     => $row['location_address_1'].', '.$row['location_address_2'].', '.$row['location_state'].', '.$row['location_postcode'].', '.$row['country_name'],
                                         'desc' => $row['description'],                                        				
 					'phoneNumber'    => $row['location_telephone'],
                                         'email'          => $row['location_email'],
-                                        'officeLocation' => $row['location_lat'].'-'.$row['location_lng'],
-                                    
-					'state'         => $row['location_state'],
-					'postcode'      => $row['location_postcode'],
-					'country_id'    => $row['location_country_id'],
-					'country'       => $row['country_name'],
-					'iso_code_2'    => $row['iso_code_2'],
-					'iso_code_3'    => $row['iso_code_3'],
-					'location_lat'  => $row['location_lat'],
-					'location_lng'  => $row['location_lng'],
-					'format'        => $row['format'],
+                                        'officeLocation' => $row['location_lat'].','.$row['location_lng'],
+                                        'facebookPage' => $row['location_facebookPage'],
+                                        'instagramPage' => $row['location_instagramPage'],
+                                        'twitterPage' => $row['location_twitterPage'],
+                                        'pinterestPage' => $row['location_pinterestPage'],
+                                        'map' => $this->getLatLng($row['location_postcode'])
+                                        //'map' => $row['location_map']
+					//'state'         => $row['location_state'],
+					//'postcode'      => $row['location_postcode'],
+					//'country_id'    => $row['location_country_id'],
+					//'country'       => $row['country_name'],
+					//'iso_code_2'    => $row['iso_code_2'],
+					//'iso_code_3'    => $row['iso_code_3'],
+					//'location_lat'  => $row['location_lat'],
+					//'location_lng'  => $row['location_lng'],
+					//'format'        => $row['format'],
 				);
 			}
 		}
 
 		return $location_data;
 	}
+        
+        public function getLatLng($search_query = FALSE) {																// method to perform regular expression match on postcode string and return latitude and longitude
+            if (empty($search_query)) {
+                return "NO_SEARCH_QUERY";
+            }
+
+            $temp_query = $search_query;
+
+            if (is_string($temp_query)) {
+                $postcode = strtoupper(str_replace(' ', '', $temp_query)); // strip spaces from postcode string and convert to uppercase
+
+                            if (preg_match("/^[A-Z]{1,2}[0-9]{2,3}[A-Z]{2}$/", $postcode) OR
+                            preg_match("/^[A-Z]{1,2}[0-9]{1}[A-Z]{1}[0-9]{1}[A-Z]{2}$/", $postcode) OR
+                            preg_match("/^GIR0[A-Z]{2}$/", $postcode)) {
+                                    $temp_query = $postcode;
+                            } else {
+                                    $temp_query = explode(' ', $temp_query);
+                            }
+                    }
+
+            $temp_query = (is_array($temp_query)) ? implode(', ', $temp_query) : $temp_query;
+
+            $url  = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . urlencode($temp_query) .'&sensor=false'; //encode $postcode string and construct the url query
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, $url);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
+                    //curl_setopt($ch, CURLOPT_USERAGENT, $this->CI->agent->agent_string());
+                    $geocode_data = curl_exec($ch);
+                    curl_close($ch);
+
+                    $output = json_decode($geocode_data);// decode the geocode data
+
+                    if ($output) {
+                if ($output->status === 'OK') {	// create variable for geocode data status
+                    $origin = array(
+                                    'latitude' 	=> $output->results[0]->geometry->location->lat,
+                                    'longitude' => $output->results[0]->geometry->location->lng
+                                );
+                    $annotations = array(
+                                    'title' 	=> $output->results[0]->formatted_address,
+                                    'latitude' 	=> $output->results[0]->geometry->location->lat,
+                                    'longitude' => $output->results[0]->geometry->location->lng
+                                );
+                    
+                    return array(
+                        //'search_query'	=> $search_query,
+                        'origin'	=> $origin,
+                        'zoomLevel' =>  15,
+                        'annotations' =>  $annotations,
+                        //'latitude' 	=> $output->results[0]->geometry->location->lat,
+                        //'longitude' 	=> $output->results[0]->geometry->location->lng
+                    );
+                        }
+
+                return "INVALID_SEARCH_QUERY";
+            }
+
+                    return "FAILED";
+        }
 
 	public function getAddress($location_id) {
 		$address_data = array();

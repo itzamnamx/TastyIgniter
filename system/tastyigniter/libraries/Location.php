@@ -657,10 +657,10 @@ class Location {
 		$geocode_data = curl_exec($ch);
 		curl_close($ch);
 
-		$output = json_decode($geocode_data);											// decode the geocode data
+		$output = json_decode($geocode_data);	// decode the geocode data
 
 		if ($output) {
-            if ($output->status === 'OK') {														// create variable for geocode data status
+            if ($output->status === 'OK') {		// create variable for geocode data status
                 return array(
                     'search_query'	=> $search_query,
                     'lat' 			=> $output->results[0]->geometry->location->lat,

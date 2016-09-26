@@ -36,17 +36,18 @@ class Locations extends REST_Controller {
 			$this->response(NULL, 400);
 		}
 
-		$location = $this->Locations_model->getLocation($id);
+		$location = $this->Locations_model->findLocation($id);
 
 		if (! is_null($location)) 
 		{                    
-			$this->response(array("response" => $location), 200);
+			$this->response(array("result" => $location), 200);
 		}
 		else
 		{
 			$this->response(array("error" => "No se encuentra la ubicacion"), 404);
 		}
-	}
+	}       
+        
 
 }
 /* End of file pois.php */
