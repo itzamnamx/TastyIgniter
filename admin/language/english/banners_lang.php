@@ -1,31 +1,32 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['text_title'] 		            = 'Banners';
-$lang['text_heading'] 		            = 'Banners';
-$lang['text_edit_heading'] 		        = 'Banner: %s';
-$lang['text_list'] 		                = 'Banner List';
-$lang['text_tab_general'] 		        = 'Banner Details';
-$lang['text_empty'] 		            = 'There are no banners available.';
-$lang['text_image'] 		            = 'Image';
-$lang['text_carousel'] 		            = 'Carousel';
-$lang['text_custom'] 		            = 'Custom';
+$lang['text_title'] 		            = 'Anuncios';
+$lang['text_heading'] 		            = 'Anuncios';
+$lang['text_edit_heading'] 		        = 'Anuncio: %s';
+$lang['text_list'] 		                = 'Lista de Anuncios';
+$lang['text_tab_general'] 		        = 'Detalle del anuncio';
+$lang['text_empty'] 		            = 'No hay Anuncios disponibles.';
+$lang['text_image'] 		            = 'Imagen';
+$lang['text_carousel'] 		            = 'Carrusel';
+$lang['text_custom'] 		            = 'Personalizado';
 
-$lang['button_modules'] 		        = 'Modules';
+$lang['button_modules'] 		        = 'Moduloss';
 
-$lang['column_name'] 		            = 'Name';
-$lang['column_type'] 		            = 'Type';
-$lang['column_status'] 		            = 'Status';
+$lang['column_name'] 		            = 'Nombre';
+$lang['column_type'] 		            = 'Tipo';
+$lang['column_status'] 		            = 'Estado';
 $lang['column_id'] 		                = 'ID';
 
-$lang['label_name'] 		            = 'Name';
-$lang['label_type'] 		            = 'Type';
+$lang['label_name'] 		            = 'Nombre';
+$lang['label_type'] 		            = 'Tipo';
 $lang['label_click_url'] 		        = 'Click URL';
-$lang['label_language'] 		        = 'Language';
-$lang['label_alt_text'] 		        = 'Alternative Text';
-$lang['label_status'] 		            = 'Status';
-$lang['label_image'] 		            = 'Image';
-$lang['label_images'] 		            = 'Images';
-$lang['label_custom_code'] 		        = 'Custom Code';
+$lang['label_language'] 		        = 'Lenguaje';
+$lang['label_alt_text'] 		        = 'Texto';
+$lang['label_tags'] 		        = 'Etiquetas';
+$lang['label_status'] 		            = 'Estado';
+$lang['label_image'] 		            = 'Imagen';
+$lang['label_images'] 		            = 'Imagenes';
+$lang['label_custom_code'] 		        = 'Código Personalizado';
 
 /* End of file banners_lang.php */
 /* Location: ./admin/language/english/banners_lang.php */

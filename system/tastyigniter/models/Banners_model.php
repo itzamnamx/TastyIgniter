@@ -35,6 +35,38 @@ class Banners_model extends TI_Model {
 
 		return $result;
 	}
+        
+        public function findBanners() {
+		$this->db->from('banners');
+
+		$query = $this->db->get();
+
+		$result = array();                
+                $banner_data = array();
+                
+		if ($query->num_rows() > 0) {
+                    $i=0;
+                    foreach ($query->result() as $row)
+                    {
+                       $banner_data = array(					
+                        
+					'id' => $row->banner_id,
+					'guid'  => $row->guid,
+                                        'thumb' => $row->image_code, 
+					'picture' => $row->image_code,
+                                        'title' => $row->name,
+                                        'body' => $row->alt_text,
+                                        'tags' => $row->tags
+			);
+			$result[$i] = $banner_data;
+                        $i++;
+                    }
+                        
+		}
+
+		return $result;
+	}
+        
 
 	public function getBanner($banner_id) {
 		$this->db->from('banners');
@@ -84,9 +116,14 @@ class Banners_model extends TI_Model {
 				foreach ($save['carousels'] as $key => $value) {
 					$save['image_code']['paths'][] = $value;
 				}
-
-				$this->db->set('image_code', serialize($save['image_code']));
+                                $this->db->set('image_code', serialize($save['image_code']));				
 			}
+		}                
+                
+                if (isset($save['tags'])) {
+			$this->db->set('tags', $save['tags']);
+		} else {
+			$this->db->set('tags', '#NutriTips');
 		}
 
 		if (isset($save['status'])) {
@@ -99,9 +136,12 @@ class Banners_model extends TI_Model {
 			$this->db->where('banner_id', $banner_id);
 			$query = $this->db->update('banners');
 		} else {
+                        $this->db->set('guid', GUID());
 			$query = $this->db->insert('banners');
 			$banner_id = $this->db->insert_id();
 		}
+                
+                
 
 		return ($query === TRUE AND is_numeric($banner_id)) ? $banner_id : FALSE;
 	}

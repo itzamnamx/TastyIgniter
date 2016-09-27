@@ -103,7 +103,16 @@
 								<?php echo form_error('alt_text', '<span class="text-danger">', '</span>'); ?>
 							</div>
 						</div>
+            				</div>
+                                    
+                                        <div class="form-group">
+						<label for="input-tags" class="col-sm-3 control-label"><?php echo lang('label_tags'); ?></label>
+						<div class="col-sm-5">
+							<input type="text" name="tags" id="input-tags" class="form-control" value="<?php echo set_value('tags', $tags); ?>" />
+							<?php echo form_error('tags', '<span class="text-danger">', '</span>'); ?>
+						</div>
 					</div>
+                                    
 					<div id="custom-type" class="type">
 						<div class="form-group">
 							<label for="input-custom-code" class="col-sm-3 control-label"><?php echo lang('label_custom_code'); ?></label>
