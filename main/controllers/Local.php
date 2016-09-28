@@ -311,6 +311,7 @@ class Local extends Main_Controller {
 
 		$this->template->render('local_all', $data);
 	}
+        
 }
 
 /* End of file local.php */
